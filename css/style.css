@@ -1928,30 +1928,48 @@ h6:not(.hero-section h6):not(.page-banner h6):not(.showcase-banner h6):not(.text
 }
 
 /* Filter Chips styling */
+.associate-filter-tab-wrapper {
+    max-width: 1100px;
+    border-radius: 50px !important;
+    border: 1px solid #E2E8F0 !important;
+    background-color: #ffffff;
+    box-shadow: var(--shadow-sm);
+}
+
 .associate-filter-chip {
-    padding: 8px 20px;
+    padding: 10px 24px;
     border-radius: 30px;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     font-weight: 600;
     color: var(--color-accent);
-    background-color: var(--color-bg-light);
-    border: 1px solid #E2E8F0;
-    transition: all 0.25s ease;
+    background-color: transparent;
+    border: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     white-space: nowrap;
 }
 
 .associate-filter-chip:hover {
-    border-color: var(--color-primary);
     color: var(--color-primary);
-    background-color: rgba(10, 77, 162, 0.03);
+    background-color: rgba(10, 77, 162, 0.05);
 }
 
 .associate-filter-chip.active {
     background-color: var(--color-primary) !important;
     color: #ffffff !important;
-    border-color: var(--color-primary) !important;
-    box-shadow: 0 4px 10px rgba(10, 77, 162, 0.2);
+    box-shadow: 0 4px 12px rgba(10, 77, 162, 0.15);
+}
+
+@media (max-width: 991px) {
+    .associate-filter-tab-wrapper {
+        border-radius: 16px !important;
+        padding: 8px !important;
+        width: 100%;
+    }
+    .associate-filter-chip {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
 }
 
 /* Search Wrapper styling */
@@ -1962,8 +1980,8 @@ h6:not(.hero-section h6):not(.page-banner h6):not(.showcase-banner h6):not(.text
 }
 
 .associate-search-wrapper input {
-    height: 50px;
-    padding-left: 45px;
+    height: 52px;
+    padding-left: 50px;
     border-radius: 30px;
     border: 1px solid #E2E8F0;
     box-shadow: var(--shadow-sm);
