@@ -156,27 +156,28 @@
             </div>
 
             <!-- Toolbar (Search & Category Filters) -->
-            <div class="card p-4 shadow-sm border rounded-4 mb-5 bg-white">
-                <div class="row align-items-center gy-4">
-                    <!-- Search Bar -->
-                    <div class="col-lg-4">
+            <div class="mb-5">
+                <!-- Search Bar Row -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-8 col-12">
                         <div class="associate-search-wrapper">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" id="associate-search-bar" class="form-control" placeholder="Search by name, product, or keywords...">
+                            <input type="text" id="associate-search-bar" class="form-control" placeholder="Search by associate name, products, or applications...">
                         </div>
                     </div>
-                    <!-- Filter Chips -->
-                    <div class="col-lg-8">
-                        <div class="d-flex flex-wrap gap-2 justify-content-lg-end" id="associate-filter-container">
-                            <button class="associate-filter-chip active" data-filter="all">All</button>
-                            <button class="associate-filter-chip" data-filter="air-conditioning">Air Conditioning</button>
-                            <button class="associate-filter-chip" data-filter="cold-chain">Cold Chain</button>
-                            <button class="associate-filter-chip" data-filter="compressors">Compressors</button>
-                            <button class="associate-filter-chip" data-filter="controls">Controls</button>
-                            <button class="associate-filter-chip" data-filter="heat-exchangers">Heat Exchangers</button>
-                            <button class="associate-filter-chip" data-filter="electrical">Electrical</button>
-                            <button class="associate-filter-chip" data-filter="accessories">Accessories</button>
-                        </div>
+                </div>
+                
+                <!-- Filter Chips Row -->
+                <div class="d-flex justify-content-center">
+                    <div class="associate-filter-tab-wrapper p-1 d-flex flex-wrap gap-1 justify-content-center" id="associate-filter-container">
+                        <button class="associate-filter-chip active" data-filter="all">All Associates</button>
+                        <button class="associate-filter-chip" data-filter="air-conditioning">Air Conditioning</button>
+                        <button class="associate-filter-chip" data-filter="cold-chain">Cold Chain</button>
+                        <button class="associate-filter-chip" data-filter="compressors">Compressors</button>
+                        <button class="associate-filter-chip" data-filter="controls">Controls</button>
+                        <button class="associate-filter-chip" data-filter="heat-exchangers">Heat Exchangers</button>
+                        <button class="associate-filter-chip" data-filter="electrical">Electrical</button>
+                        <button class="associate-filter-chip" data-filter="accessories">Accessories</button>
                     </div>
                 </div>
             </div>
