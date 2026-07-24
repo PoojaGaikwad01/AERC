@@ -124,7 +124,7 @@
     </header>
 
     <!-- Page Banner -->
-    <section class="page-banner">
+    <section class="page-banner" style="background-image: linear-gradient(135deg, rgba(16, 42, 67, 0.9) 0%, rgba(10, 77, 162, 0.7) 100%), url('assets/images/slider_smart_tech.png'); background-size: cover; background-position: center;">
         <div class="container">
             <h1>Technical Download Center</h1>
             <p>Get Official AERC Catalogues, Brand Brochures, and Specifications Sheets</p>
@@ -147,63 +147,154 @@
             
             <p class="text-muted text-center mb-5">Welcome to AERC's official download library. Select a category below to download genuine product catalogs and technical datasheets in PDF format.</p>
             
-            <div class="row">
-                <!-- Column 1: Air Conditioning -->
-                <div class="col-md-4 mb-4">
-                    <div class="download-card">
-                        <div class="download-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                        <h5 class="text-accent mb-2">Air Conditioning Catalogues</h5>
-                        <p class="small text-muted mb-4">Brochures and installation guides for residential and commercial split, cassette, ductable, and VRF systems.</p>
-                        
-                        <div class="list-group list-group-flush mb-4 small">
-                            <a href="#" class="list-group-item px-0 text-muted"><i class="fa-solid fa-arrow-down text-primary me-2"></i> Daikin VRV Catalog (12MB)</a>
-                            <a href="#" class="list-group-item px-0 text-muted"><i class="fa-solid fa-arrow-down text-primary me-2"></i> Cruise Cassette Brochure (5.2MB)</a>
-                            <a href="#" class="list-group-item px-0 text-muted"><i class="fa-solid fa-arrow-down text-primary me-2"></i> Voltas Ductable Catalogue (8MB)</a>
+            <!-- Search & Filters Strip -->
+            <div class="row mb-5 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bg-light-custom p-4 rounded shadow-sm border">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+                                    <input type="text" id="librarySearch" class="form-control border-start-0 ps-0" placeholder="Search manuals, catalogs, brochures...">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex flex-wrap gap-2 justify-content-md-end">
+                                    <button class="btn btn-sm btn-outline-primary active filter-btn" data-filter="all">All Files</button>
+                                    <button class="btn btn-sm btn-outline-primary filter-btn" data-filter="brochure">Brochures</button>
+                                    <button class="btn btn-sm btn-outline-primary filter-btn" data-filter="manual">Manuals</button>
+                                    <button class="btn btn-sm btn-outline-primary filter-btn" data-filter="catalogue">Catalogues</button>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="download-meta">
-                            <span>Format: PDF</span>
-                            <span>Updated: 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documents Grid -->
+            <div class="row" id="downloads-grid">
+                <!-- 1. Daikin VRV -->
+                <div class="col-lg-4 col-md-6 mb-4 download-item" data-type="catalogue" data-search="daikin vrv central air conditioning catalogue">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-light text-primary border">Catalogue</span>
+                                <span class="badge bg-danger-subtle text-danger font-weight-bold" style="font-size:0.7rem;">PDF</span>
+                            </div>
+                            <h5 class="font-weight-bold text-heading" style="font-size:1.1rem;">Daikin VRV System Catalogue</h5>
+                            <p class="small text-muted mb-3">Detailed model options, indoor unit capacities, pipe sizing limits, and engineering footprints.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 small border-top pt-2">
+                                <span class="text-muted"><i class="fa-solid fa-weight-hanging me-1"></i> Size: 12.4 MB</span>
+                                <span class="text-muted"><i class="fa-solid fa-building-flag me-1"></i> Brand: Daikin</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary-custom w-100"><i class="fa-solid fa-file-arrow-down me-2"></i> Download File</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Column 2: Refrigeration & Cold Chain -->
-                <div class="col-md-4 mb-4">
-                    <div class="download-card">
-                        <div class="download-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                        <h5 class="text-accent mb-2">Refrigeration & Cold Chain</h5>
-                        <p class="small text-muted mb-4">Catalogues for Copeland scrolls, BlueCold evaporators, Bitzer units, Western deep freezers, and AERC cold rooms.</p>
-                        
-                        <div class="list-group list-group-flush mb-4 small">
-                            <a href="#" class="list-group-item px-0 text-muted"><i class="fa-solid fa-arrow-down text-primary me-2"></i> AERC Cold Chain Catalogue (14.5MB)</a>
-                            <a href="#" class="list-group-item px-0 text-muted"><i class="fa-solid fa-arrow-down text-primary me-2"></i> Copeland Scroll CDU Catalog (18MB)</a>
-                            <a href="#" class="list-group-item px-0 text-muted"><i class="fa-solid fa-arrow-down text-primary me-2"></i> BlueCold Evaporator Guide (9.8MB)</a>
+                <!-- 2. Copeland Scroll Manual -->
+                <div class="col-lg-4 col-md-6 mb-4 download-item" data-type="manual" data-search="copeland scroll compressor technical manual engineering">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-light text-primary border">Manual</span>
+                                <span class="badge bg-danger-subtle text-danger font-weight-bold" style="font-size:0.7rem;">PDF</span>
+                            </div>
+                            <h5 class="font-weight-bold text-heading" style="font-size:1.1rem;">Copeland Scroll Application Manual</h5>
+                            <p class="small text-muted mb-3">Comprehensive wiring guides, compression ratio thresholds, and oil level limits for ZB and ZF scroll models.</p>
                         </div>
-                        
-                        <div class="download-meta">
-                            <span>Format: PDF</span>
-                            <span>Updated: 2026</span>
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 small border-top pt-2">
+                                <span class="text-muted"><i class="fa-solid fa-weight-hanging me-1"></i> Size: 8.7 MB</span>
+                                <span class="text-muted"><i class="fa-solid fa-building-flag me-1"></i> Brand: Copeland</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary-custom w-100"><i class="fa-solid fa-file-arrow-down me-2"></i> Download File</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Column 3: Controllers & Spares -->
-                <div class="col-md-4 mb-4">
-                    <div class="download-card">
-                        <div class="download-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                        <h5 class="text-accent mb-2">Electronics & Spares</h5>
-                        <p class="small text-muted mb-4">Technical documentation for Dixell digital controllers, Multispan dashboards, copper piping fittings, and gases.</p>
-                        
-                        <div class="list-group list-group-flush mb-4 small">
-                            <a href="#" class="list-group-item px-0 text-muted"><i class="fa-solid fa-arrow-down text-primary me-2"></i> Dixell Process Controllers (7.2MB)</a>
-                            <a href="#" class="list-group-item px-0 text-muted"><i class="fa-solid fa-arrow-down text-primary me-2"></i> Rajco Copper Tube Manual (3.5MB)</a>
-                            <a href="#" class="list-group-item px-0 text-muted"><i class="fa-solid fa-arrow-down text-primary me-2"></i> Floron Gas pressure curves (2.8MB)</a>
+                <!-- 3. Cruise Cassette Brochure -->
+                <div class="col-lg-4 col-md-6 mb-4 download-item" data-type="brochure" data-search="cruise cassette air conditioner brochure product sheet">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-light text-primary border">Brochure</span>
+                                <span class="badge bg-danger-subtle text-danger font-weight-bold" style="font-size:0.7rem;">PDF</span>
+                            </div>
+                            <h5 class="font-weight-bold text-heading" style="font-size:1.1rem;">Cruise Cassette AC Product Brochure</h5>
+                            <p class="small text-muted mb-3">Visual specs, sound level graphs, auto-swing sweeping vectors, and panel dimension details.</p>
                         </div>
-                        
-                        <div class="download-meta">
-                            <span>Format: PDF</span>
-                            <span>Updated: 2026</span>
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 small border-top pt-2">
+                                <span class="text-muted"><i class="fa-solid fa-weight-hanging me-1"></i> Size: 5.2 MB</span>
+                                <span class="text-muted"><i class="fa-solid fa-building-flag me-1"></i> Brand: Cruise</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary-custom w-100"><i class="fa-solid fa-file-arrow-down me-2"></i> Download File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. AERC Cold Chain Catalogue -->
+                <div class="col-lg-4 col-md-6 mb-4 download-item" data-type="catalogue" data-search="aerc cold chain modular cold storage room blast freezer catalogue">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-light text-primary border">Catalogue</span>
+                                <span class="badge bg-danger-subtle text-danger font-weight-bold" style="font-size:0.7rem;">PDF</span>
+                            </div>
+                            <h5 class="font-weight-bold text-heading" style="font-size:1.1rem;">AERC Turnkey Cold Storage Catalogue</h5>
+                            <p class="small text-muted mb-3">Overview of custom-sized cold room layouts, blast freezer models, and PUF panel thickness specifications.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 small border-top pt-2">
+                                <span class="text-muted"><i class="fa-solid fa-weight-hanging me-1"></i> Size: 14.5 MB</span>
+                                <span class="text-muted"><i class="fa-solid fa-building-flag me-1"></i> Brand: AERC</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary-custom w-100"><i class="fa-solid fa-file-arrow-down me-2"></i> Download File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. BlueCold Evaporator Datasheet -->
+                <div class="col-lg-4 col-md-6 mb-4 download-item" data-type="brochure" data-search="bluecold evaporator unit cooler defrost manual coil sheet">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-light text-primary border">Brochure</span>
+                                <span class="badge bg-danger-subtle text-danger font-weight-bold" style="font-size:0.7rem;">PDF</span>
+                            </div>
+                            <h5 class="font-weight-bold text-heading" style="font-size:1.1rem;">BlueCold Evaporator Unit Cooler Sheet</h5>
+                            <p class="small text-muted mb-3">Fan air flow throw charts, fin pitch gaps, defrost heater wattage parameters, and coil footprints.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 small border-top pt-2">
+                                <span class="text-muted"><i class="fa-solid fa-weight-hanging me-1"></i> Size: 6.3 MB</span>
+                                <span class="text-muted"><i class="fa-solid fa-building-flag me-1"></i> Brand: BlueCold</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary-custom w-100"><i class="fa-solid fa-file-arrow-down me-2"></i> Download File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Dixell Controller Manual -->
+                <div class="col-lg-4 col-md-6 mb-4 download-item" data-type="manual" data-search="dixell xr02cx temperature controller manual parameters modbus">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-light text-primary border">Manual</span>
+                                <span class="badge bg-danger-subtle text-danger font-weight-bold" style="font-size:0.7rem;">PDF</span>
+                            </div>
+                            <h5 class="font-weight-bold text-heading" style="font-size:1.1rem;">Dixell XR02CX Technical Manual</h5>
+                            <p class="small text-muted mb-3">Default parameter lists, alarm configuration steps, wiring terminal maps, and Modbus codes.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 small border-top pt-2">
+                                <span class="text-muted"><i class="fa-solid fa-weight-hanging me-1"></i> Size: 4.1 MB</span>
+                                <span class="text-muted"><i class="fa-solid fa-building-flag me-1"></i> Brand: Dixell</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary-custom w-100"><i class="fa-solid fa-file-arrow-down me-2"></i> Download File</a>
                         </div>
                     </div>
                 </div>
@@ -222,9 +313,9 @@
                         <p class="small mt-2" style="color: rgba(255,255,255,0.6);">Authorized Channel Partner, Wholesaler & SSD Distributor of HVAC-R solutions since 1991. Quality, commitment, and engineering excellence.</p>
                     </div>
                     <div class="d-flex gap-3 fs-5">
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/ajantaelectric" target="_blank" class="text-white-50" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ajanta_electric" target="_blank" class="text-white-50" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com/channel/UCgGjAWxnyXEsXDPetMmoe_w" target="_blank" class="text-white-50" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
@@ -276,12 +367,10 @@
             
             <div class="footer-bottom">
                 <div class="row align-items-center">
-                    <div class="col-md-6 text-md-start mb-3 mb-md-0">
-                        <p class="small">&copy; 2026 Ajanta Electric & Refrigeration Co. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="#" class="text-white-50 small me-3">Privacy Policy</a>
-                        <a href="#" class="text-white-50 small">Terms & Conditions</a>
+                    <div class="col-12 text-center">
+                        <p class="small mb-0" style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">
+                            &copy; 2026 <strong style="color: #ffffff; font-weight: 700;">Ajanta Electric &amp; Refrigeration Co.</strong>. All rights reserved. <span style="margin: 0 10px; color: rgba(255, 255, 255, 0.25);">|</span> Developed and maintained by <a href="https://idyllicservices.com" target="_blank" style="background-color: rgba(47, 128, 237, 0.15); color: #56ccf2; padding: 4px 10px; border-radius: 4px; font-weight: 600; font-size: 0.8rem; display: inline-block; text-decoration: none; margin-left: 5px; transition: all 0.3s ease;">Idyllic Services Pvt. Ltd.</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -305,6 +394,51 @@
 
     <!-- Bootstrap 5 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Dynamic Download Center Filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('librarySearch');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const downloadItems = document.querySelectorAll('.download-item');
+
+            let activeFilter = 'all';
+            let searchQuery = '';
+
+            function applyFilters() {
+                downloadItems.forEach(item => {
+                    const type = item.getAttribute('data-type');
+                    const searchText = item.getAttribute('data-search').toLowerCase();
+
+                    const matchesFilter = (activeFilter === 'all' || type === activeFilter);
+                    const matchesSearch = searchText.includes(searchQuery);
+
+                    if (matchesFilter && matchesSearch) {
+                        item.style.display = 'block';
+                        item.classList.remove('d-none');
+                    } else {
+                        item.style.display = 'none';
+                        item.classList.add('d-none');
+                    }
+                });
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    searchQuery = this.value.toLowerCase().trim();
+                    applyFilters();
+                });
+            }
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    activeFilter = this.getAttribute('data-filter');
+                    applyFilters();
+                });
+            });
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
