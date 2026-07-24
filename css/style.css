@@ -1865,3 +1865,15 @@ h6:not(.hero-section h6):not(.page-banner h6):not(.showcase-banner h6):not(.text
     }
 }
 
+/* Associate page card title styling for uniform alignment */
+.associate-card-title {
+    font-size: 1.15rem !important;
+    font-weight: 700;
+    color: var(--color-text-heading);
+    min-height: 2.8rem; /* forces same height for wrapping titles */
+    display: flex;
+    align-items: center;
+    margin-top: 15px !important;
+    margin-bottom: 10px !important;
+}
+
