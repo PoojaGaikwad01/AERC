@@ -135,7 +135,7 @@
     </header>
 
     <!-- Page Banner -->
-    <section class="page-banner">
+    <section class="page-banner" style="background-image: linear-gradient(135deg, rgba(16, 42, 67, 0.9) 0%, rgba(10, 77, 162, 0.7) 100%), url('assets/images/slider_residential.png'); background-size: cover; background-position: center;">
         <div class="container">
             <h1>HVAC-R Products</h1>
             <p>Authorized Supply of Genuine Global Brand Equipment & Components</p>
@@ -156,309 +156,103 @@
     <section class="section-padding">
         <div class="container">
             <!-- Tabs Navigation -->
-            <div class="d-flex flex-wrap justify-content-center product-tabs">
+            <div class="d-flex flex-wrap justify-content-center product-tabs mb-4">
                 <button class="product-tab-btn active" data-target="all">All Offerings</button>
-                <button class="product-tab-btn" data-target="residential-ac">Residential AC</button>
-                <button class="product-tab-btn" data-target="commercial-ac">Commercial AC</button>
-                <button class="product-tab-btn" data-target="vrf-vrv">VRF / VRV</button>
+                <button class="product-tab-btn" data-target="air-conditioning">Air Conditioning</button>
+                <button class="product-tab-btn" data-target="refrigeration">Refrigeration</button>
                 <button class="product-tab-btn" data-target="cold-chain">Cold Chain</button>
-                <button class="product-tab-btn" data-target="refrigeration-eq">Refrigeration Eq</button>
-                <button class="product-tab-btn" data-target="compressors">Compressors & CDUs</button>
-                <button class="product-tab-btn" data-target="hvac-components">Components & Spares</button>
+                <button class="product-tab-btn" data-target="hvac-components">HVAC Components</button>
+            </div>
+
+            <!-- Search & Filters Strip -->
+            <div class="row mb-5 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bg-light-custom p-4 rounded shadow-sm border">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+                                    <input type="text" id="catalogSearch" class="form-control border-start-0 ps-0" placeholder="Search equipment, models, brands...">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <select id="catalogBrandFilter" class="form-select">
+                                    <option value="all">All Brand Manufacturers</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <button id="clearFilters" class="btn btn-secondary-custom w-100 py-2 px-0" style="font-size:0.9rem;">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Products Grid -->
             <div class="row" id="products-grid">
-                <!-- 1. Residential AC -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="residential-ac">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/hero_split_ac.png" class="product-img" alt="Split AC">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Residential AC</div>
-                            <h3 class="product-title">Split & Window Air Conditioners</h3>
-                            <p class="product-desc">Advanced inverter high-wall splits and heavy-duty window units. Designed for maximum energy savings and silent operation.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Daikin, Cruise, Voltas, Blue Star, Samsung, Mitsubishi Electric, Panasonic, LG, Godrej.
-                            </div>
-                            <a href="contact.html?product=Split%20and%20Window%20AC" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Dynamically loaded via catalog.js -->
+            </div>
 
-                <!-- 2. Commercial AC -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="commercial-ac">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/cassette_ac_hd.png" class="product-img" alt="Cassette AC">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Commercial AC</div>
-                            <h3 class="product-title">Cassette & Ductable Units</h3>
-                            <p class="product-desc">Ceiling suspended cassette ACs and high-static pressure ductable split units for large halls, showrooms, and offices.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Daikin, Voltas, Blue Star, Carrier, Cruise, Mitsubishi Electric, Samsung.
-                            </div>
-                            <a href="contact.html?product=Cassette%20and%20Ductable%20AC" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Pagination Navigation -->
+            <nav aria-label="Product Catalog Pagination" class="d-flex justify-content-center mt-5">
+                <ul class="pagination pagination-custom" id="catalog-pagination">
+                    <!-- Dynamically loaded via catalog.js -->
+                </ul>
+            </nav>
+        </div>
+    </section>
 
-                <!-- 3. VRF / VRV -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="vrf-vrv">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/vrf_vrv.png" class="product-img" alt="VRF VRV Systems">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">VRF / VRV Systems</div>
-                            <h3 class="product-title">Variable Refrigerant Flow (VRF/VRV)</h3>
-                            <p class="product-desc">Multi-zone climate control systems connecting dozens of indoor units to a single outdoor module. Ideal for modern commercial spaces and premium homes.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Daikin VRV, Samsung DVM, Mitsubishi Electric City Multi, Carrier, LG Multi V.
-                            </div>
-                            <a href="contact.html?product=VRF%20VRV%20System" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header border-0 bg-dark-navy text-white px-4 py-3">
+                    <h5 class="modal-title font-weight-bold" id="detailsModalLabel"><i class="fa-solid fa-circle-info text-accent me-2"></i>Product Technical & Sourcing Profile</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
-                <!-- 4. Heat Pumps -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="commercial-ac">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/heat_pump_pool.png" class="product-img" alt="Heat Pumps">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Heat Pumps</div>
-                            <h3 class="product-title">Commercial & Swimming Pool Heat Pumps</h3>
-                            <p class="product-desc">Energy-efficient heating solutions utilizing ambient heat for domestic hot water, commercial hotels, and pool heating.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Copeland, Danfoss, Cruise Heating Scrolls.
-                            </div>
-                            <a href="contact.html?product=Heat%20Pump%20Systems" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. Cold Chain Modular Rooms -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="cold-chain">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/cold_room.png" class="product-img" alt="Cold storage walk ins">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Cold Chain Solutions</div>
-                            <h3 class="product-title">Cold Storage & Walk-In Rooms</h3>
-                            <p class="product-desc">Custom-engineered modular puff panel cold storage rooms, chiller walk-ins, and walk-in freezers for food, dairy, and pharmaceuticals.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Blue Star, Blue Cold Refrigeration, Guntner, Approcool.
-                            </div>
-                            <a href="contact.html?product=Cold%20Storage%20Rooms" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6. Blast Freezers -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="cold-chain">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/product_refrigerator_single.png" class="product-img" alt="Blast Freezer">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Cold Chain Solutions</div>
-                            <h3 class="product-title">Blast Freezers & Chillers</h3>
-                            <p class="product-desc">High capacity shock freezers to drop food temperatures rapidly from +70°C to -18°C, arresting bacterial growth and preserving food quality.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Blue Star, Guntner, Blue Cold, Bitzer.
-                            </div>
-                            <a href="contact.html?product=Blast%20Freezer" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. Deep Freezers -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="refrigeration-eq">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/product_refrigerator_glass.png" class="product-img" alt="Chest Freezer">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Refrigeration Equipment</div>
-                            <h3 class="product-title">Deep Freezers & Chest Cabinets</h3>
-                            <p class="product-desc">Hard-top and glass-top chest deep freezers, eutectic freezers (ideal for load-shedding), and portable freezers on wheels.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Western Refrigeration, Blue Star, Voltas, Godrej.
-                            </div>
-                            <a href="contact.html?product=Deep%20Freezer" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 8. Visi-Coolers -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="refrigeration-eq">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/product_refrigerator_double.png" class="product-img" alt="Visi Cooler">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Refrigeration Equipment</div>
-                            <h3 class="product-title">Visi-Coolers & Upright Chillers</h3>
-                            <p class="product-desc">Glass-door upright chillers and freezers for retail display, back bars, and food preparation under-counters.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Western Refrigeration, Blue Star, Voltas, Godrej.
-                            </div>
-                            <a href="contact.html?product=Visi-Cooler" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9. Water Coolers -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="refrigeration-eq">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/product_water_cooler.png" class="product-img" alt="Water Cooler">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Refrigeration Equipment</div>
-                            <h3 class="product-title">Water Coolers & Dispensers</h3>
-                            <p class="product-desc">Stainless steel storage water coolers and compact hot/cold water dispensers for offices, schools, and factories.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Usha, Blue Star, Voltas.
-                            </div>
-                            <a href="contact.html?product=Water%20Cooler" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 10. Compressors -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="compressors">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/compressor_scroll.png" class="product-img" alt="HVAC Compressors">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Compressors & CDUs</div>
-                            <h3 class="product-title">Hermetic, Scroll & Semi-Hermetic Compressors</h3>
-                            <p class="product-desc">Complete range of Fractional HP, Scroll, Digital Scroll, and Semi-Hermetic compressors for heating, AC, and low-temp refrigeration.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Copeland (Emerson), Danfoss, Tecumseh, Bitzer, Carrier Midea Rotary.
-                            </div>
-                            <a href="contact.html?product=HVAC-R%20Compressor" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 11. Condensing Units -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="compressors">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop" class="product-img" alt="Condensing Units">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Compressors & CDUs</div>
-                            <h3 class="product-title">Condensing Units (CDU Kits)</h3>
-                            <p class="product-desc">Air-cooled and water-cooled condensing units. Includes FHP condensing units, scroll CDUs, and multi-compressor racks.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Copeland, Danfoss, Tecumseh, Bitzer, Blue Cold, Approcool.
-                            </div>
-                            <a href="contact.html?product=Condensing%20Unit" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 12. Refrigerant Gases -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="hvac-components">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1536882240095-0379873feb4e?q=80&w=600&auto=format&fit=crop" class="product-img" alt="Refrigerant gas cylinders">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Components & Spares</div>
-                            <h3 class="product-title">Floron Refrigerant Gases</h3>
-                            <p class="product-desc">Authorized supply of eco-friendly and standard refrigerant gases. R-22, R-134a, R-404a, R-407c, R-410a, R-32, R-600, butane, and specialty gases.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> SRF Limited (Floron).
-                            </div>
-                            <a href="contact.html?product=Refrigerant%20Gas" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 13. Digital Controllers -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="hvac-components">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop" class="product-img" alt="Digital Controllers">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Components & Spares</div>
-                            <h3 class="product-title">Digital Controllers & Data Loggers</h3>
-                            <p class="product-desc">Electronic process controllers, temperature data loggers, flow switches, digital thermostats, and custom electrical control panels.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Dixell (Emerson), Multispan, Honeywell, PVR Controls.
-                            </div>
-                            <a href="contact.html?product=Digital%20Controller" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 14. Copper Tubes -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="hvac-components">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="assets/images/hvac_components.png" class="product-img" alt="Copper tubes">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Components & Spares</div>
-                            <h3 class="product-title">Copper Tubes & Fittings</h3>
-                            <p class="product-desc">Premium VRF-grade copper tubes, pancake coils, straight pipes, and high-pressure copper fittings for HVAC-R piping.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Rajco Metal Industries.
-                            </div>
-                            <a href="contact.html?product=Copper%20Tubes" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 15. Evaporator Coils -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="refrigeration-eq">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop" class="product-img" alt="Evaporator Coils">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Refrigeration Equipment</div>
-                            <h3 class="product-title">Evaporator & Cooling Coils</h3>
-                            <p class="product-desc">Authorized BlueCold (BLC Series) Freon air coolers, stainless steel dual discharge coils, and ceiling/floor mounted evaporators for cold stores.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> BlueCold, Guntner, Approcool, Bitzer.
-                            </div>
-                            <a href="contact.html?product=Evaporator%20Coils" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 16. Flow Controls & Valves -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item" data-cat="hvac-components">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1508962914676-134849a727f0?q=80&w=600&auto=format&fit=crop" class="product-img" alt="Flow Controls and Valves">
-                        </div>
-                        <div class="product-body">
-                            <div class="product-cat">Components & Spares</div>
-                            <h3 class="product-title">Flow Controls, Expansion Valves & Sensors</h3>
-                            <p class="product-desc">Authorized Danfoss, Honeywell, and PVR controls flow regulators, thermostatic expansion valves (TXV), solenoid valves, and pressure transducers.</p>
-                            <div class="mb-3 small">
-                                <strong>Brands:</strong> Danfoss, Honeywell, Copeland Flow Controls, PVR Controls.
-                            </div>
-                            <a href="contact.html?product=Flow%20Controls%20and%20Valves" class="btn btn-sm btn-primary-custom w-100">Send Enquiry</a>
-                        </div>
-                    </div>
+                <div class="modal-body p-4 p-md-5" id="productDetailsModalBody">
+                    <!-- Loaded dynamically via catalog.js -->
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Product Enquiry Modal -->
+    <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header border-0 bg-primary text-white px-4 py-3">
+                    <h5 class="modal-title font-weight-bold" id="enquiryModalLabel"><i class="fa-solid fa-paper-plane me-2"></i>Request Wholesale Quotation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="catalogEnquiryForm" novalidate>
+                        <div class="mb-3">
+                            <label for="modalNameInput" class="form-label small font-weight-bold">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="modalNameInput" required placeholder="Enter your full name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalEmailInput" class="form-label small font-weight-bold">Business Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="modalEmailInput" required placeholder="name@company.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalPhoneInput" class="form-label small font-weight-bold">Phone Number <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="modalPhoneInput" required placeholder="10-digit phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalSubjectInput" class="form-label small font-weight-bold">Subject</label>
+                            <input type="text" class="form-control" id="modalSubjectInput" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalMessageTextarea" class="form-label small font-weight-bold">Message / Specifications Required</label>
+                            <textarea class="form-control" id="modalMessageTextarea" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 mt-2">Submit Sourcing Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Professional Footer -->
     <footer class="footer-section">
@@ -470,9 +264,9 @@
                         <p class="small mt-2" style="color: rgba(255,255,255,0.6);">Authorized Channel Partner, Wholesaler & SSD Distributor of HVAC-R solutions since 1991. Quality, commitment, and engineering excellence.</p>
                     </div>
                     <div class="d-flex gap-3 fs-5">
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/ajantaelectric" target="_blank" class="text-white-50" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ajanta_electric" target="_blank" class="text-white-50" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com/channel/UCgGjAWxnyXEsXDPetMmoe_w" target="_blank" class="text-white-50" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
@@ -525,12 +319,10 @@
             
             <div class="footer-bottom">
                 <div class="row align-items-center">
-                    <div class="col-md-6 text-md-start mb-3 mb-md-0">
-                        <p class="small">&copy; 2026 Ajanta Electric & Refrigeration Co. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="#" class="text-white-50 small me-3">Privacy Policy</a>
-                        <a href="#" class="text-white-50 small">Terms & Conditions</a>
+                    <div class="col-12 text-center">
+                        <p class="small mb-0" style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">
+                            &copy; 2026 <strong style="color: #ffffff; font-weight: 700;">Ajanta Electric &amp; Refrigeration Co.</strong>. All rights reserved. <span style="margin: 0 10px; color: rgba(255, 255, 255, 0.25);">|</span> Developed and maintained by <a href="https://idyllicservices.com" target="_blank" style="background-color: rgba(47, 128, 237, 0.15); color: #56ccf2; padding: 4px 10px; border-radius: 4px; font-weight: 600; font-size: 0.8rem; display: inline-block; text-decoration: none; margin-left: 5px; transition: all 0.3s ease;">Idyllic Services Pvt. Ltd.</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -555,50 +347,8 @@
     <!-- Bootstrap 5 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom tab query script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Function to handle tab changes
-            const tabButtons = document.querySelectorAll('.product-tab-btn');
-            const productItems = document.querySelectorAll('.product-item');
-
-            function filterCategory(category) {
-                tabButtons.forEach(btn => {
-                    if (btn.getAttribute('data-target') === category) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
-                    }
-                });
-
-                productItems.forEach(item => {
-                    if (category === 'all' || item.getAttribute('data-cat') === category) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-
-            // Click listener
-            tabButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const target = this.getAttribute('data-target');
-                    filterCategory(target);
-                    // Update URL hash/query without reload
-                    const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?cat=' + target;
-                    window.history.pushState({path:newurl},'',newurl);
-                });
-            });
-
-            // Parse URL search parameters on load
-            const urlParams = new URLSearchParams(window.location.search);
-            const initialCat = urlParams.get('cat');
-            if (initialCat) {
-                filterCategory(initialCat);
-            }
-        });
-    </script>
+    <!-- Dynamic interactive catalog script -->
+    <script src="js/catalog.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
