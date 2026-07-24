@@ -127,7 +127,7 @@
     </header>
 
     <!-- Page Banner -->
-    <section class="page-banner">
+    <section class="page-banner" style="background-image: linear-gradient(135deg, rgba(16, 42, 67, 0.9) 0%, rgba(10, 77, 162, 0.7) 100%), url('assets/images/slider_smart_tech.png'); background-size: cover; background-position: center;">
         <div class="container">
             <h1>Product Registration</h1>
             <p>Professional After-Sales Assistance and Customer Care Center</p>
@@ -179,78 +179,96 @@
                         <h3 class="text-accent mb-3"><i class="fa-solid fa-file-signature text-primary me-2"></i> Product Registration</h3>
                             <p class="text-muted small mb-4">Register your newly purchased HVAC-R units to activate warranty coverage and ensure fast customer support response.</p>
                             
-                            <form id="aercProductRegistrationForm">
+                            <form id="aercProductRegistrationForm" class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label small font-weight-bold">Customer Name *</label>
-                                        <input type="text" class="form-control" placeholder="Enter your full name" required>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="customerName" placeholder="Customer Name" required>
+                                            <label for="customerName">Customer Name *</label>
+                                        </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label small font-weight-bold">Mobile Number *</label>
-                                        <input type="tel" class="form-control" placeholder="10-digit mobile number" required>
+                                        <div class="form-floating">
+                                            <input type="tel" class="form-control" id="mobileNumber" placeholder="Mobile Number" required>
+                                            <label for="mobileNumber">Mobile Number *</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label small font-weight-bold">Email Address *</label>
-                                        <input type="email" class="form-control" placeholder="email@example.com" required>
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="emailAddress" placeholder="Email Address" required>
+                                            <label for="emailAddress">Email Address *</label>
+                                        </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label small font-weight-bold">Product Category *</label>
-                                        <select class="form-select" required>
-                                            <option value="">Select Category</option>
-                                            <option>Split AC</option>
-                                            <option>Commercial AC (Cassette/Ductable)</option>
-                                            <option>VRF / VRV System</option>
-                                            <option>Cold Storage Chiller / Freezer</option>
-                                            <option>Chest Deep Freezer</option>
-                                            <option>Water Cooler / Dispenser</option>
-                                            <option>Compressor / CDU Kit</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label small font-weight-bold">Brand *</label>
-                                        <select class="form-select" required>
-                                            <option value="">Select Brand</option>
-                                            <option>Daikin</option>
-                                            <option>Voltas</option>
-                                            <option>Blue Star</option>
-                                            <option>Cruise</option>
-                                            <option>Mitsubishi Electric</option>
-                                            <option>Carrier</option>
-                                            <option>Copeland</option>
-                                            <option>Danfoss</option>
-                                            <option>Western Refrigeration</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label small font-weight-bold">Model Number *</label>
-                                        <input type="text" class="form-control" placeholder="e.g. FQA50AV16" required>
+                                        <div class="form-floating">
+                                            <select class="form-select" id="productCategory" required>
+                                                <option value="" selected disabled>Select Category</option>
+                                                <option>Split AC</option>
+                                                <option>Commercial AC (Cassette/Ductable)</option>
+                                                <option>VRF / VRV System</option>
+                                                <option>Cold Storage Chiller / Freezer</option>
+                                                <option>Chest Deep Freezer</option>
+                                                <option>Water Cooler / Dispenser</option>
+                                                <option>Compressor / CDU Kit</option>
+                                            </select>
+                                            <label for="productCategory">Product Category *</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label small font-weight-bold">Serial Number *</label>
-                                        <input type="text" class="form-control" placeholder="Enter unit serial number" required>
+                                        <div class="form-floating">
+                                            <select class="form-select" id="productBrand" required>
+                                                <option value="" selected disabled>Select Brand</option>
+                                                <option>Daikin</option>
+                                                <option>Voltas</option>
+                                                <option>Blue Star</option>
+                                                <option>Cruise</option>
+                                                <option>Mitsubishi Electric</option>
+                                                <option>Carrier</option>
+                                                <option>Copeland</option>
+                                                <option>Danfoss</option>
+                                                <option>Western Refrigeration</option>
+                                            </select>
+                                            <label for="productBrand">Brand *</label>
+                                        </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label small font-weight-bold">Purchase Date *</label>
-                                        <input type="date" class="form-control" required>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="modelNumber" placeholder="Model Number" required>
+                                            <label for="modelNumber">Model Number *</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="serialNumber" placeholder="Serial Number" required>
+                                            <label for="serialNumber">Serial Number *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" id="purchaseDate" placeholder="Purchase Date" required>
+                                            <label for="purchaseDate">Purchase Date *</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label small font-weight-bold">Dealer/Retailer Name *</label>
-                                    <input type="text" class="form-control" placeholder="e.g. Ajanta Electric & Refrigeration Co." required>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="dealerName" placeholder="Dealer Name" required>
+                                        <label for="dealerName">Dealer/Retailer Name *</label>
+                                    </div>
                                 </div>
                                 <div class="mb-4">
-                                    <label class="form-label small font-weight-bold">Upload Invoice Copy (PDF or Image) *</label>
-                                    <div class="file-upload-wrapper">
+                                    <label class="form-label small font-weight-bold d-block mb-2">Upload Invoice Copy (PDF or Image) *</label>
+                                    <div class="file-upload-wrapper p-3 border rounded text-center bg-light">
                                         <i class="fa-solid fa-cloud-arrow-up fs-3 text-primary mb-2"></i>
                                         <p class="mb-1 small font-weight-bold">Click to upload or drag & drop</p>
                                         <span class="text-muted small">Max file size: 5MB</span>
-                                        <input type="file" class="file-upload-input" accept=".pdf,image/*" required>
+                                        <input type="file" class="file-upload-input" accept=".pdf,image/*" required style="cursor:pointer;">
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary-custom w-100">Submit Product Registration</button>
@@ -271,9 +289,9 @@
                         <p class="small mt-2" style="color: rgba(255,255,255,0.6);">Authorized Channel Partner, Wholesaler & SSD Distributor of HVAC-R solutions since 1991. Quality, commitment, and engineering excellence.</p>
                     </div>
                     <div class="d-flex gap-3 fs-5">
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/ajantaelectric" target="_blank" class="text-white-50" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ajanta_electric" target="_blank" class="text-white-50" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com/channel/UCgGjAWxnyXEsXDPetMmoe_w" target="_blank" class="text-white-50" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
@@ -325,12 +343,10 @@
             
             <div class="footer-bottom">
                 <div class="row align-items-center">
-                    <div class="col-md-6 text-md-start mb-3 mb-md-0">
-                        <p class="small">&copy; 2026 Ajanta Electric & Refrigeration Co. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="#" class="text-white-50 small me-3">Privacy Policy</a>
-                        <a href="#" class="text-white-50 small">Terms & Conditions</a>
+                    <div class="col-12 text-center">
+                        <p class="small mb-0" style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">
+                            &copy; 2026 <strong style="color: #ffffff; font-weight: 700;">Ajanta Electric &amp; Refrigeration Co.</strong>. All rights reserved. <span style="margin: 0 10px; color: rgba(255, 255, 255, 0.25);">|</span> Developed and maintained by <a href="https://idyllicservices.com" target="_blank" style="background-color: rgba(47, 128, 237, 0.15); color: #56ccf2; padding: 4px 10px; border-radius: 4px; font-weight: 600; font-size: 0.8rem; display: inline-block; text-decoration: none; margin-left: 5px; transition: all 0.3s ease;">Idyllic Services Pvt. Ltd.</a>
+                        </p>
                     </div>
                 </div>
             </div>
