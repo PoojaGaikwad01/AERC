@@ -389,6 +389,39 @@ a:hover {
     border-color: var(--color-white) !important;
 }
 
+/* Revert and style outline buttons globally to Brand Corporate Blue */
+.btn-outline-primary, 
+.btn-outline-primary-custom {
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    background-color: transparent !important;
+    transition: var(--transition-smooth) !important;
+}
+
+.btn-outline-primary:hover, 
+.btn-outline-primary:active, 
+.btn-outline-primary:focus,
+.btn-outline-primary-custom:hover {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+}
+
+.btn-outline-secondary {
+    color: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+    background-color: transparent !important;
+    transition: var(--transition-smooth) !important;
+}
+
+.btn-outline-secondary:hover, 
+.btn-outline-secondary:active, 
+.btn-outline-secondary:focus {
+    background-color: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+    color: var(--color-white) !important;
+}
+
 /* Hero Section */
 .hero-section {
     background-color: var(--color-dark-navy);
