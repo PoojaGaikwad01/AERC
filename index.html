@@ -139,13 +139,18 @@
     </header>
 
     <!-- Premium Hero Banner -->
-    <section class="hero-section">
-        <div class="container">
+    <section class="hero-section-premium blueprint-pattern">
+        <!-- Floating abstract shapes -->
+        <div class="blob-container">
+            <div class="floating-blob-blue" style="top: 15%; left: 10%;"></div>
+            <div class="floating-blob-cyan" style="bottom: 20%; right: 15%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="row align-items-center">
-                <div class="col-lg-7 animate-on-scroll">
-                    <div class="tagline">AJANTA ELECTRIC & REFRIGERATION CO.</div>
-                    <h1>Authorized Wholesale Distribution Partner for Premium HVAC-R Brands</h1>
-                    <p>Operating since 1991. Authorized Wholesaler, Channel Partner, and SSD Distributor of global HVAC-R leaders. We supply high-efficiency air conditioning systems, compressors, condensing units, evaporators, and components to commercial, industrial, and retail sectors.</p>
+                <div class="col-lg-8 animate-on-scroll">
+                    <span class="slide-label d-inline-block mb-3 text-uppercase font-weight-bold text-accent" style="letter-spacing: 1.5px; font-size: 0.9rem; background: rgba(47, 128, 237, 0.12); padding: 6px 16px; border-radius: 30px; border: 1px solid rgba(47, 128, 237, 0.25);">Since 1991</span>
+                    <h1 class="text-white font-weight-bold mb-3" style="font-size: 3.5rem; line-height: 1.2;">Ajanta Electric & Refrigeration Co.</h1>
+                    <p class="text-white-50 fs-5 mb-4" style="max-width: 650px;">Authorized wholesale distribution partner for premium global HVAC-R brands. We supply high-efficiency air conditioning systems, compressors, condensing units, evaporators, and components to commercial, industrial, and retail sectors.</p>
                     <div class="d-flex flex-wrap gap-3">
                         <a href="products.html" class="btn btn-primary-custom">Explore Products</a>
                         <a href="contact.html" class="btn btn-secondary-custom btn-secondary-custom-white text-white border-white">Send Enquiry</a>
@@ -153,11 +158,49 @@
                 </div>
             </div>
         </div>
+        <!-- Flowing bottom wave transition to counter info strip -->
+        <div class="svg-wave-divider wave-bottom" style="position: absolute; bottom: 0; left: 0; transform: rotate(180deg); z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#f7f9fc"></path>
+            </svg>
+        </div>
     </section>
 
-    <!-- Company Introduction Section -->
-    <section class="section-padding bg-white-custom">
+    <!-- Hero Trust Strip -->
+    <div class="corporate-info-strip bg-light-grey-custom" style="position: relative; z-index: 4;">
         <div class="container">
+            <div class="row text-center gy-3 gy-md-0">
+                <div class="col-md-3 col-6">
+                    <div class="strip-item">
+                        <i class="fa-solid fa-calendar-check text-primary me-2"></i>
+                        <span>Since 1991 (30+ Years)</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="strip-item">
+                        <i class="fa-solid fa-handshake text-primary me-2"></i>
+                        <span>Authorized SSD Partner</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="strip-item">
+                        <i class="fa-solid fa-truck-fast text-primary me-2"></i>
+                        <span>Pan India Supply Chain</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="strip-item">
+                        <i class="fa-solid fa-gears text-primary me-2"></i>
+                        <span>Technical Sizing Sourcing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Company Introduction Section -->
+    <section class="section-padding bg-white-custom engineering-grid bg-glow-radial" style="position: relative; overflow: hidden; z-index: 1;">
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
                     <div class="section-title-wrapper">
@@ -174,15 +217,21 @@
                 </div>
                 <div class="col-lg-6 animate-on-scroll">
                     <div class="position-relative ps-lg-5">
-                        <img src="assets/images/vrf_vrv.png" class="img-fluid rounded shadow-lg" alt="Commercial VRF Air Conditioning">
+                        <img src="assets/images/slider_showcase.png" class="img-fluid rounded shadow-lg" alt="Wholesale HVAC-R Distribution Showroom">
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Curved bottom wave transition to statistics -->
+        <div class="svg-wave-divider wave-bottom" style="position: absolute; bottom: 0; left: 0; transform: rotate(180deg); z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="#f3f7ff"></path>
+            </svg>
+        </div>
     </section>
 
     <!-- Company Statistics Section -->
-    <section class="section-padding bg-light-blue-grad">
+    <section class="section-padding bg-gradient-soft hex-pattern" style="position: relative; overflow: hidden; z-index: 3;">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-6 mb-4 mb-md-0 animate-on-scroll">
@@ -214,8 +263,14 @@
     </section>
 
     <!-- Why Choose AERC Section -->
-    <section class="section-padding bg-white-custom">
-        <div class="container">
+    <section class="section-padding bg-gradient-soft blueprint-pattern bg-glow-radial" style="position: relative; overflow: hidden; z-index: 1;">
+        <!-- Top SVG Wave divider -->
+        <div class="svg-wave-divider wave-top" style="position: absolute; top: 0; left: 0; z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#f3f7ff"></path>
+            </svg>
+        </div>
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="section-title-wrapper text-center">
                 <span class="section-subtitle">Our Strengths</span>
                 <h2 class="section-title">Why Choose AERC</h2>
@@ -268,8 +323,19 @@
     </section>
 
     <!-- Product Categories Overview -->
-    <section class="section-padding bg-soft-grey">
-        <div class="container">
+    <section class="section-padding bg-white-custom blueprint-pattern bg-glow-radial" style="position: relative; overflow: hidden; z-index: 1;">
+        <!-- Top SVG Wave divider -->
+        <div class="svg-wave-divider wave-top" style="position: absolute; top: 0; left: 0; z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+        <!-- Floating abstract shapes -->
+        <div class="blob-container">
+            <div class="floating-blob-blue" style="top: 15%; right: 10%;"></div>
+            <div class="floating-blob-cyan" style="bottom: 25%; left: 10%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="section-title-wrapper text-center">
                 <span class="section-subtitle">Our Offerings</span>
                 <h2 class="section-title">Key Product Segments</h2>
@@ -322,9 +388,9 @@
     </section>
 
     <!-- Featured Products & Innovations Section -->
-    <section class="section-padding bg-white-custom border-top border-bottom">
+    <section class="section-padding bg-white-custom blueprint-pattern bg-glow-radial" style="position: relative; overflow: hidden; z-index: 1; padding-top: 0;">
         <div class="container">
-            <div class="section-title-wrapper text-center">
+            <div class="section-title-wrapper text-center mb-5">
                 <span class="section-subtitle">Premium Selections</span>
                 <h2 class="section-title">Featured Products & Innovations</h2>
                 <p class="text-muted mt-3">Explore our core product ranges sourced from global market leaders for immediate industrial and retail logistics.</p>
@@ -336,69 +402,148 @@
                         <div>
                             <div class="product-img-wrapper">
                                 <img src="assets/images/compressor_scroll.png" class="product-img" alt="Copeland Scroll Compressor">
+                                <span class="product-badge bg-primary text-white" style="position:absolute; top:12px; left:12px; font-size:0.7rem; padding:4px 10px; border-radius:20px;">Refrigeration</span>
                             </div>
-                            <div class="product-body">
-                                <div class="product-cat">Refrigeration</div>
-                                <h3 class="product-title font-weight-bold" style="font-size:1.1rem; color:var(--color-accent);">Copeland Scroll Compressors</h3>
-                                <p class="product-desc small text-muted">Hermetic and scroll compressors for refrigeration cold storage rooms, transport lines, and HVAC units.</p>
+                            <div class="product-body p-4">
+                                <div class="product-cat">Copeland (Emerson)</div>
+                                <h3 class="product-title font-weight-bold" style="font-size:1.15rem; color:var(--color-text-heading); margin-bottom:10px;">Copeland Scroll Compressors</h3>
+                                <p class="product-desc small text-muted mb-3">Hermetic scroll units engineered for low-temperature and medium-temperature refrigeration loops.</p>
+                                
+                                <div class="card-bullets mb-3">
+                                    <h6 class="small font-weight-bold text-heading mb-1"><i class="fa-solid fa-list-check text-primary me-1"></i> Features:</h6>
+                                    <ul class="list-unstyled text-muted small ps-2 mb-2">
+                                        <li>• Compliance wear scroll design</li>
+                                        <li>• 30% electrical energy savings</li>
+                                        <li>• Built-in internal pressure relief</li>
+                                    </ul>
+                                    <h6 class="small font-weight-bold text-heading mb-1"><i class="fa-solid fa-industry text-primary me-1"></i> Applications:</h6>
+                                    <ul class="list-unstyled text-muted small ps-2">
+                                        <li>• Cold Rooms & Walk-ins</li>
+                                        <li>• Milk Chilling Complexes</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-3 pt-0 border-top bg-light text-center">
-                            <a href="products.html?cat=compressors" class="btn btn-sm btn-primary-custom w-100 mt-2">Explore Range</a>
+                        <div class="p-3 pt-0 border-top bg-light-custom text-center">
+                            <div class="d-flex gap-2 mt-2 mb-2">
+                                <a href="products.html?cat=refrigeration" class="btn btn-sm btn-outline-primary flex-grow-1" style="font-size:0.8rem;">Details</a>
+                                <a href="download-center.html" class="btn btn-sm btn-outline-secondary" title="Download Brochure"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                            <a href="contact.html?product=Copeland%20Scroll%20Compressor" class="btn btn-sm btn-primary-custom w-100 mb-2">Enquire Now</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Product 2: Daikin Cassette -->
                 <div class="col-lg-3 col-md-6 mb-4 animate-on-scroll">
                     <div class="product-card h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="product-img-wrapper">
                                 <img src="assets/images/cassette_ac_hd.png" class="product-img" alt="Daikin Cassette AC Unit">
+                                <span class="product-badge bg-primary text-white" style="position:absolute; top:12px; left:12px; font-size:0.7rem; padding:4px 10px; border-radius:20px;">Air Conditioning</span>
                             </div>
-                            <div class="product-body">
-                                <div class="product-cat">Air Conditioning</div>
-                                <h3 class="product-title font-weight-bold" style="font-size:1.1rem; color:var(--color-accent);">Ceiling Cassette AC Units</h3>
-                                <p class="product-desc small text-muted">Premium ceiling-mounted 4-way direct air swing sweep systems engineered for open layout corporate offices.</p>
+                            <div class="product-body p-4">
+                                <div class="product-cat">Daikin / Voltas</div>
+                                <h3 class="product-title font-weight-bold" style="font-size:1.15rem; color:var(--color-text-heading); margin-bottom:10px;">Ceiling Cassette AC Units</h3>
+                                <p class="product-desc small text-muted mb-3">Premium ceiling-recessed 4-way direct air swing systems designed for corporate offices and open layouts.</p>
+                                
+                                <div class="card-bullets mb-3">
+                                    <h6 class="small font-weight-bold text-heading mb-1"><i class="fa-solid fa-list-check text-primary me-1"></i> Features:</h6>
+                                    <ul class="list-unstyled text-muted small ps-2 mb-2">
+                                        <li>• 360-degree uniform draft sweep</li>
+                                        <li>• Built-in high-lift drain pump</li>
+                                        <li>• Multi-stage dust filtration grids</li>
+                                    </ul>
+                                    <h6 class="small font-weight-bold text-heading mb-1"><i class="fa-solid fa-industry text-primary me-1"></i> Applications:</h6>
+                                    <ul class="list-unstyled text-muted small ps-2">
+                                        <li>• Corporate Workspace Halls</li>
+                                        <li>• Retail Boutiques & Cafes</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-3 pt-0 border-top bg-light text-center">
-                            <a href="products.html?cat=commercial-ac" class="btn btn-sm btn-primary-custom w-100 mt-2">Explore Range</a>
+                        <div class="p-3 pt-0 border-top bg-light-custom text-center">
+                            <div class="d-flex gap-2 mt-2 mb-2">
+                                <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary flex-grow-1" style="font-size:0.8rem;">Details</a>
+                                <a href="download-center.html" class="btn btn-sm btn-outline-secondary" title="Download Brochure"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                            <a href="contact.html?product=Ceiling%20Cassette%20AC%20Unit" class="btn btn-sm btn-primary-custom w-100 mb-2">Enquire Now</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Product 3: BlueCold Evaporator -->
                 <div class="col-lg-3 col-md-6 mb-4 animate-on-scroll">
                     <div class="product-card h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="product-img-wrapper">
-                                <img src="assets/images/cold_room.png" class="product-img" alt="BlueCold Evaporator Unit">
+                                <img src="assets/images/hero_slide_3.png" class="product-img" alt="BlueCold Evaporator Unit">
+                                <span class="product-badge bg-primary text-white" style="position:absolute; top:12px; left:12px; font-size:0.7rem; padding:4px 10px; border-radius:20px;">Cold Chain</span>
                             </div>
-                            <div class="product-body">
-                                <div class="product-cat">Cold Chain</div>
-                                <h3 class="product-title font-weight-bold" style="font-size:1.1rem; color:var(--color-accent);">BlueCold Evaporator Coils</h3>
-                                <p class="product-desc small text-muted">High-efficiency air cooling evaporator fan units with anti-corrosive gold fin claddings and built-in defrost.</p>
+                            <div class="product-body p-4">
+                                <div class="product-cat">BlueCold / Guntner</div>
+                                <h3 class="product-title font-weight-bold" style="font-size:1.15rem; color:var(--color-text-heading); margin-bottom:10px;">Evaporator & Cooling Coils</h3>
+                                <p class="product-desc small text-muted">High-efficiency air cooling evaporator fan units configured with hydrophilic anti-corrosive fin loops.</p>
+                                
+                                <div class="card-bullets mb-3">
+                                    <h6 class="small font-weight-bold text-heading mb-1"><i class="fa-solid fa-list-check text-primary me-1"></i> Features:</h6>
+                                    <ul class="list-unstyled text-muted small ps-2 mb-2">
+                                        <li>• Stainless steel defrost rods</li>
+                                        <li>• Hydrophilic blue/gold fins</li>
+                                        <li>• High-throw quiet axial fans</li>
+                                    </ul>
+                                    <h6 class="small font-weight-bold text-heading mb-1"><i class="fa-solid fa-industry text-primary me-1"></i> Applications:</h6>
+                                    <ul class="list-unstyled text-muted small ps-2">
+                                        <li>• Modular Chiller cold storage</li>
+                                        <li>• Frozen blast freeze corridors</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-3 pt-0 border-top bg-light text-center">
-                            <a href="products.html?cat=refrigeration-eq" class="btn btn-sm btn-primary-custom w-100 mt-2">Explore Range</a>
+                        <div class="p-3 pt-0 border-top bg-light-custom text-center">
+                            <div class="d-flex gap-2 mt-2 mb-2">
+                                <a href="products.html?cat=cold-chain" class="btn btn-sm btn-outline-primary flex-grow-1" style="font-size:0.8rem;">Details</a>
+                                <a href="download-center.html" class="btn btn-sm btn-outline-secondary" title="Download Brochure"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                            <a href="contact.html?product=Evaporator%20Cooling%20Coils" class="btn btn-sm btn-primary-custom w-100 mb-2">Enquire Now</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Product 4: Floron Gases -->
                 <div class="col-lg-3 col-md-6 mb-4 animate-on-scroll">
                     <div class="product-card h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="product-img-wrapper">
                                 <img src="assets/images/hvac_components.png" class="product-img" alt="Floron Refrigerant Gas Cylinders">
+                                <span class="product-badge bg-primary text-white" style="position:absolute; top:12px; left:12px; font-size:0.7rem; padding:4px 10px; border-radius:20px;">Components</span>
                             </div>
-                            <div class="product-body">
-                                <div class="product-cat">Components & Spares</div>
-                                <h3 class="product-title font-weight-bold" style="font-size:1.1rem; color:var(--color-accent);">Floron Refrigerant Gases</h3>
-                                <p class="product-desc small text-muted">Genuine eco-friendly refrigerant gas cylinders with zero GWP and high thermodynamic cooling coefficients.</p>
+                            <div class="product-body p-4">
+                                <div class="product-cat">SRF Limited (Floron)</div>
+                                <h3 class="product-title font-weight-bold" style="font-size:1.15rem; color:var(--color-text-heading); margin-bottom:10px;">Floron Refrigerant Gases</h3>
+                                <p class="product-desc small text-muted mb-3">Genuine factory-purified refrigerant gases matching tight moisture guidelines for compressor safety.</p>
+                                
+                                <div class="card-bullets mb-3">
+                                    <h6 class="small font-weight-bold text-heading mb-1"><i class="fa-solid fa-list-check text-primary me-1"></i> Features:</h6>
+                                    <ul class="list-unstyled text-muted small ps-2 mb-2">
+                                        <li>• 99.9% verified chemical purity</li>
+                                        <li>• Moisture thresholds under 10 PPM</li>
+                                        <li>• Zero ozone depletion factors</li>
+                                    </ul>
+                                    <h6 class="small font-weight-bold text-heading mb-1"><i class="fa-solid fa-industry text-primary me-1"></i> Applications:</h6>
+                                    <ul class="list-unstyled text-muted small ps-2">
+                                        <li>• HVAC System Re-charging</li>
+                                        <li>• Commercial Refrigeration CDUs</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-3 pt-0 border-top bg-light text-center">
-                            <a href="products.html?cat=hvac-components" class="btn btn-sm btn-primary-custom w-100 mt-2">Explore Range</a>
+                        <div class="p-3 pt-0 border-top bg-light-custom text-center">
+                            <div class="d-flex gap-2 mt-2 mb-2">
+                                <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary flex-grow-1" style="font-size:0.8rem;">Details</a>
+                                <a href="download-center.html" class="btn btn-sm btn-outline-secondary" title="Download Brochure"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                            <a href="contact.html?product=Floron%20Refrigerant%20Gas" class="btn btn-sm btn-primary-custom w-100 mb-2">Enquire Now</a>
                         </div>
                     </div>
                 </div>
@@ -406,15 +551,134 @@
         </div>
     </section>
 
-    <!-- Brand Partners Carousel -->
-    <section class="section-padding bg-white-custom">
-        <div class="container">
-            <div class="section-title-wrapper text-center">
+    <!-- Brand Partners Grid & Carousel -->
+    <section class="section-padding bg-gradient-blue-glow hex-pattern bg-glow-radial" style="position: relative; overflow: hidden; z-index: 1;">
+        <!-- Top SVG Wave divider -->
+        <div class="svg-wave-divider wave-top" style="position: absolute; top: 0; left: 0; z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#f3f7ff"></path>
+            </svg>
+        </div>
+        <!-- Floating abstract shapes -->
+        <div class="blob-container">
+            <div class="floating-blob-blue" style="top: 10%; left: 10%;"></div>
+            <div class="floating-blob-cyan" style="bottom: 10%; right: 10%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 10;">
+            <div class="section-title-wrapper text-center mb-5">
                 <span class="section-subtitle">Authorized Channels</span>
                 <h2 class="section-title">Global Brands We Represent</h2>
-                <p class="text-muted mt-3">We are authorized channel partners, SSD distributors, wholesalers, and dealers for leading names in HVAC-R.</p>
+                <p class="text-muted mt-3">AERC is an authorized channel partner, wholesaler, SSD distributor, and dealer for HVAC-R industry leaders.</p>
+            </div>
+
+            <!-- Premium Brand Cards Grid -->
+            <div class="row mb-5">
+                <!-- Daikin -->
+                <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="brand-card-logo mb-3 text-start" style="height:40px; display:flex; align-items:center;"><img src="assets/images/logos/logo_daikin.png" alt="Daikin Logo" style="max-height: 35px; width:auto;"></div>
+                            <h4 class="font-weight-bold text-heading mt-2" style="font-size:1.2rem;">Daikin Airconditioning</h4>
+                            <p class="small text-muted mb-3">Global leader in Variable Refrigerant Volume (VRV) central cooling and smart inverter commercial/residential air conditioning systems.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-primary border me-1 mb-1">VRV Systems</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Cassette AC</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Ductables</span>
+                            </div>
+                            <p class="small mb-1 text-muted"><strong>Applications:</strong> Luxury Villas, Corporate Offices, Retail Stores</p>
+                        </div>
+                        <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Brand Solutions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Copeland -->
+                <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="brand-card-logo mb-3 text-start" style="height:40px; display:flex; align-items:center;"><img src="assets/images/logos/logo_copeland.png" alt="Copeland Logo" style="max-height: 35px; width:auto;"></div>
+                            <h4 class="font-weight-bold text-heading mt-2" style="font-size:1.2rem;">Copeland Compressors</h4>
+                            <p class="small text-muted mb-3">Authorized SSD partner. Industry-standard scroll, digital scroll, and semi-hermetic compressors engineered for maximum cooling efficiency.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-primary border me-1 mb-1">Scroll Compressors</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">CDUs</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Heating Scrolls</span>
+                            </div>
+                            <p class="small mb-1 text-muted"><strong>Applications:</strong> Cold Rooms, Blast Freezers, Milk Chilling Silos</p>
+                        </div>
+                        <a href="copeland.html" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Brand Solutions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Carrier -->
+                <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="brand-card-logo mb-3 text-start" style="height:40px; display:flex; align-items:center;"><img src="assets/images/logos/logo_carrier_midea.png" alt="Carrier Logo" style="max-height: 35px; width:auto;"></div>
+                            <h4 class="font-weight-bold text-heading mt-2" style="font-size:1.2rem;">Carrier HVAC-R</h4>
+                            <p class="small text-muted mb-3">Pioneers of modern cooling. Sourcing and supply of heavy-duty chillers, packaged ductable units, and commercial VRF loops.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-primary border me-1 mb-1">Chillers</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Packaged Units</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">VRF Systems</span>
+                            </div>
+                            <p class="small mb-1 text-muted"><strong>Applications:</strong> Pharmaceutical Plants, Large Shopping Centers, Hospitals</p>
+                        </div>
+                        <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Brand Solutions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Blue Star -->
+                <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="brand-card-logo mb-3 text-start" style="height:40px; display:flex; align-items:center;"><img src="assets/images/logos/logo_blue_star.png" alt="Blue Star Logo" style="max-height: 35px; width:auto;"></div>
+                            <h4 class="font-weight-bold text-heading mt-2" style="font-size:1.2rem;">Blue Star India</h4>
+                            <p class="small text-muted mb-3">India's leading commercial refrigeration company. Authorized supplier of cold room storage panels, chest freezers, and water coolers.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-primary border me-1 mb-1">Cold Storage</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Chest Freezers</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Blast Freezers</span>
+                            </div>
+                            <p class="small mb-1 text-muted"><strong>Applications:</strong> Dairy Complexes, Hotels, Medical Freezers</p>
+                        </div>
+                        <a href="products.html?cat=cold-chain" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Brand Solutions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Danfoss -->
+                <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="brand-card-logo mb-3 text-start" style="height:40px; display:flex; align-items:center;"><img src="assets/images/logos/logo_danfoss.png" alt="Danfoss Logo" style="max-height: 35px; width:auto;"></div>
+                            <h4 class="font-weight-bold text-heading mt-2" style="font-size:1.2rem;">Danfoss Controls</h4>
+                            <p class="small text-muted mb-3">Global standard for refrigeration loops. Sourcing of expansion valves, solenoid switches, process valves, and safety switches.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-primary border me-1 mb-1">Expansion Valves</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Pressure Switches</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Solenoids</span>
+                            </div>
+                            <p class="small mb-1 text-muted"><strong>Applications:</strong> CDU Assemblies, Automation Panels, Chiller Piping</p>
+                        </div>
+                        <a href="products.html?cat=hvac-components" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Brand Solutions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- BlueCold -->
+                <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="brand-card-logo mb-3 text-start" style="height:40px; display:flex; align-items:center;"><img src="assets/images/logos/logo_bluecold.png" alt="BlueCold Logo" style="max-height: 35px; width:auto;"></div>
+                            <h4 class="font-weight-bold text-heading mt-2" style="font-size:1.2rem;">BlueCold Evaporators</h4>
+                            <p class="small text-muted mb-3">High-efficiency air cooling evaporators, unit coolers, and blast evaporators designed with blue/gold fins for cold chain execution.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-primary border me-1 mb-1">Evaporator Coils</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Blast Freezers</span>
+                                <span class="badge bg-light text-primary border me-1 mb-1">Unit Coolers</span>
+                            </div>
+                            <p class="small mb-1 text-muted"><strong>Applications:</strong> Agri-cold Rooms, Food Processing Lines</p>
+                        </div>
+                        <a href="bluecold.html" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Brand Solutions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Marquee Brand Strip -->
         <div class="brand-carousel-container">
             <div class="brand-carousel-track">
                 <!-- Brands from PDF Profile -->
@@ -435,13 +699,19 @@
             </div>
         </div>
         <div class="text-center mt-5">
-            <a href="brands.html" class="btn btn-secondary-custom">View Brand Details & Spares</a>
+            <a href="brands.html" class="btn btn-secondary-custom">View All 15+ Brands & Spares</a>
         </div>
     </section>
 
     <!-- Industries Served Section -->
-    <section class="section-padding bg-light-blue">
-        <div class="container">
+    <section class="section-padding bg-white-custom engineering-grid" style="position: relative; overflow: hidden; z-index: 1;">
+        <!-- Top SVG Wave divider -->
+        <div class="svg-wave-divider wave-top" style="position: absolute; top: 0; left: 0; z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="section-title-wrapper text-center">
                 <span class="section-subtitle">Sectors We Support</span>
                 <h2 class="section-title">Industries We Serve</h2>
@@ -519,8 +789,19 @@
     </section>
 
     <!-- Sourcing & Sizing Support Section -->
-    <section class="section-padding bg-white-custom">
-        <div class="container">
+    <section class="section-padding bg-light-grey-custom blueprint-pattern bg-glow-radial" style="position: relative; overflow: hidden; z-index: 1;">
+        <!-- Top SVG Wave divider -->
+        <div class="svg-wave-divider wave-top" style="position: absolute; top: 0; left: 0; z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#f7f9fc"></path>
+            </svg>
+        </div>
+        <!-- Floating abstract shapes -->
+        <div class="blob-container">
+            <div class="floating-blob-blue" style="top: 10%; left: 10%;"></div>
+            <div class="floating-blob-cyan" style="bottom: 10%; right: 10%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
                     <div class="position-relative">
@@ -546,8 +827,18 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section-padding bg-soft-grey-grad">
-        <div class="container">
+    <section class="section-padding bg-light-grey-custom blueprint-pattern bg-glow-radial" style="position: relative; overflow: hidden; z-index: 1;">
+        <!-- Top SVG Wave divider -->
+        <div class="svg-wave-divider wave-top" style="position: absolute; top: 0; left: 0; z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#f7f9fc"></path>
+            </svg>
+        </div>
+        <!-- Floating abstract shapes -->
+        <div class="blob-container">
+            <div class="floating-blob-blue" style="top: 20%; right: 10%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="section-title-wrapper text-center">
                 <span class="section-subtitle">Client Feedback</span>
                 <h2 class="section-title">What Our Industry Partners Say</h2>
@@ -600,8 +891,14 @@
     </section>
 
     <!-- Latest Blogs Section -->
-    <section class="section-padding bg-white-custom">
-        <div class="container">
+    <section class="section-padding bg-white-custom blueprint-pattern" style="position: relative; overflow: hidden; z-index: 1;">
+        <!-- Top SVG Wave divider -->
+        <div class="svg-wave-divider wave-top" style="position: absolute; top: 0; left: 0; z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="section-title-wrapper text-center">
                 <span class="section-subtitle">HVAC Insights</span>
                 <h2 class="section-title">Latest Technical Articles</h2>
@@ -623,7 +920,7 @@
                 <div class="col-lg-4 mb-4 animate-on-scroll">
                     <div class="blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="assets/images/commercial_ac.png" class="blog-img" alt="Commercial Ceiling AC Installation">
+                            <img src="assets/images/cold_room.png" class="blog-img" alt="Modular Cold Room Panels">
                         </div>
                         <div class="blog-body">
                             <div class="blog-meta"><i class="fa-solid fa-calendar me-2"></i> June 28, 2026 | Cold Chain</div>
@@ -651,20 +948,37 @@
     </section>
 
     <!-- Contact CTA Section -->
-    <section class="section-padding bg-dark-blue-grad text-center border-top border-bottom">
-        <div class="container animate-on-scroll">
-            <h2 class="mb-3 text-white">Need a Custom HVAC or Refrigeration System Design?</h2>
-            <p class="text-white-50 max-w-650 mx-auto mb-4">Get in touch with our technical sales team for genuine brand equipment, components, and project designing services at the best pricing.</p>
+    <section class="section-padding bg-gradient-blue-glow hex-pattern bg-glow-radial text-center" style="position: relative; overflow: hidden; z-index: 1;">
+        <!-- Top SVG Wave divider -->
+        <div class="svg-wave-divider wave-top" style="position: absolute; top: 0; left: 0; z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#f3f7ff"></path>
+            </svg>
+        </div>
+        <!-- Floating abstract shapes -->
+        <div class="blob-container">
+            <div class="floating-blob-blue" style="top: 10%; left: 10%;"></div>
+            <div class="floating-blob-cyan" style="bottom: 10%; right: 10%;"></div>
+        </div>
+        <div class="container animate-on-scroll" style="position: relative; z-index: 10;">
+            <h2 class="mb-3 text-heading">Need a Custom HVAC or Refrigeration System Design?</h2>
+            <p class="text-muted max-w-650 mx-auto mb-4">Get in touch with our technical sales team for genuine brand equipment, components, and project designing services at the best pricing.</p>
             <div class="d-flex justify-content-center gap-3">
                 <a href="contact.html" class="btn btn-primary-custom">Send an Enquiry</a>
-                <a href="tel:+919823444447" class="btn btn-secondary-custom btn-secondary-custom-white text-white border-white"><i class="fa-solid fa-phone me-2"></i> Call Support</a>
+                <a href="tel:+919823444447" class="btn btn-outline-primary"><i class="fa-solid fa-phone me-2"></i> Call Support</a>
             </div>
         </div>
     </section>
 
     <!-- Professional Footer -->
-    <footer class="footer-section">
-        <div class="container">
+    <footer class="footer-section blueprint-pattern bg-glow-radial" style="position: relative; overflow: hidden; background-color: var(--color-dark-navy) !important; padding-top: 100px;">
+        <!-- Top SVG Wave divider transition from Contact to dark Footer -->
+        <div class="svg-wave-divider wave-top" style="position: absolute; top: 0; left: 0; z-index: 2;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 50px;">
+                <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" fill="#102a43"></path>
+            </svg>
+        </div>
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                     <div class="mb-4">
@@ -672,9 +986,9 @@
                         <p class="small mt-2" style="color: rgba(255,255,255,0.6);">Authorized Channel Partner, Wholesaler & SSD Distributor of HVAC-R solutions since 1991. Quality, commitment, and engineering excellence.</p>
                     </div>
                     <div class="d-flex gap-3 fs-5">
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/ajantaelectric" target="_blank" class="text-white-50" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ajanta_electric" target="_blank" class="text-white-50" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com/channel/UCgGjAWxnyXEsXDPetMmoe_w" target="_blank" class="text-white-50" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
@@ -727,12 +1041,10 @@
             
             <div class="footer-bottom">
                 <div class="row align-items-center">
-                    <div class="col-md-6 text-md-start mb-3 mb-md-0">
-                        <p class="small">&copy; 2026 Ajanta Electric & Refrigeration Co. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="#" class="text-white-50 small me-3">Privacy Policy</a>
-                        <a href="#" class="text-white-50 small">Terms & Conditions</a>
+                    <div class="col-12 text-center">
+                        <p class="small mb-0" style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">
+                            &copy; 2026 <strong style="color: #ffffff; font-weight: 700;">Ajanta Electric &amp; Refrigeration Co.</strong>. All rights reserved. <span style="margin: 0 10px; color: rgba(255, 255, 255, 0.25);">|</span> Developed and maintained by <a href="https://idyllicservices.com" target="_blank" style="background-color: rgba(47, 128, 237, 0.15); color: #56ccf2; padding: 4px 10px; border-radius: 4px; font-weight: 600; font-size: 0.8rem; display: inline-block; text-decoration: none; margin-left: 5px; transition: all 0.3s ease;">Idyllic Services Pvt. Ltd.</a>
+                        </p>
                     </div>
                 </div>
             </div>
