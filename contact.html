@@ -125,7 +125,7 @@
     </header>
 
     <!-- Page Banner -->
-    <section class="page-banner">
+    <section class="page-banner" style="background-image: linear-gradient(135deg, rgba(16, 42, 67, 0.9) 0%, rgba(10, 77, 162, 0.7) 100%), url('assets/images/slider_showcase.png'); background-size: cover; background-position: center;">
         <div class="container">
             <h1>Contact Us</h1>
             <p>Connect with AERC's Technical Sales & Sourcing Team</p>
@@ -201,32 +201,42 @@
                         <h4 class="mb-3 text-accent">Send Sourcing Enquiry</h4>
                         <p class="text-muted small mb-4">Fill out the fields below, and our mechanical application team will coordinate load capacities and prices with you.</p>
                         
-                        <form id="aercContactForm">
+                        <form id="aercContactForm" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label class="form-label small font-weight-bold">Full Name *</label>
-                                    <input type="text" class="form-control" placeholder="John Doe" required>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="contactName" placeholder="Full Name" required>
+                                        <label for="contactName">Full Name *</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label class="form-label small font-weight-bold">Email Address *</label>
-                                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="contactEmail" placeholder="Email Address" required>
+                                        <label for="contactEmail">Email Address *</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label class="form-label small font-weight-bold">Phone Number *</label>
-                                    <input type="tel" class="form-control" placeholder="10-digit number" required>
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="contactPhone" placeholder="Phone Number" required>
+                                        <label for="contactPhone">Phone Number *</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label class="form-label small font-weight-bold">Subject / Product Required *</label>
-                                    <input type="text" class="form-control" id="form-subject" placeholder="e.g. Copeland Compressor, VRF Installation" required>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="form-subject" placeholder="Subject / Product Required" required>
+                                        <label for="form-subject">Subject / Product Required *</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label small font-weight-bold">Specify Cooling Capacity / Requirements *</label>
-                                <textarea class="form-control" rows="4" placeholder="Describe your project size, ambient parameters, brand preferences, etc." required></textarea>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="contactMessage" placeholder="Specify Requirements" style="height: 120px;" required></textarea>
+                                    <label for="contactMessage">Specify Cooling Capacity / Requirements *</label>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-primary-custom w-100 mt-2">Submit Sourcing Query</button>
+                            <button type="submit" class="btn btn-primary-custom mt-2">Submit Sourcing Query</button>
                         </form>
                     </div>
                 </div>
@@ -256,9 +266,9 @@
                         <p class="small mt-2" style="color: rgba(255,255,255,0.6);">Authorized Channel Partner, Wholesaler & SSD Distributor of HVAC-R solutions since 1991. Quality, commitment, and engineering excellence.</p>
                     </div>
                     <div class="d-flex gap-3 fs-5">
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="text-white-50"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/ajantaelectric" target="_blank" class="text-white-50" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ajanta_electric" target="_blank" class="text-white-50" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com/channel/UCgGjAWxnyXEsXDPetMmoe_w" target="_blank" class="text-white-50" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
@@ -311,12 +321,10 @@
             
             <div class="footer-bottom">
                 <div class="row align-items-center">
-                    <div class="col-md-6 text-md-start mb-3 mb-md-0">
-                        <p class="small">&copy; 2026 Ajanta Electric & Refrigeration Co. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="#" class="text-white-50 small me-3">Privacy Policy</a>
-                        <a href="#" class="text-white-50 small">Terms & Conditions</a>
+                    <div class="col-12 text-center">
+                        <p class="small mb-0" style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">
+                            &copy; 2026 <strong style="color: #ffffff; font-weight: 700;">Ajanta Electric &amp; Refrigeration Co.</strong>. All rights reserved. <span style="margin: 0 10px; color: rgba(255, 255, 255, 0.25);">|</span> Developed and maintained by <a href="https://idyllicservices.com" target="_blank" style="background-color: rgba(47, 128, 237, 0.15); color: #56ccf2; padding: 4px 10px; border-radius: 4px; font-weight: 600; font-size: 0.8rem; display: inline-block; text-decoration: none; margin-left: 5px; transition: all 0.3s ease;">Idyllic Services Pvt. Ltd.</a>
+                        </p>
                     </div>
                 </div>
             </div>
