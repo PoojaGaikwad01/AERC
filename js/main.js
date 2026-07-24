@@ -141,36 +141,45 @@ document.addEventListener('DOMContentLoaded', function() {
         function validateField(input) {
             let isValid = true;
             let message = '';
-            let value = input.value;
             
-            if (input.type !== 'file') {
-                value = value.replace(/\s+/g, ' ').trim();
+            // Clean consecutive duplicate spaces for text/textarea inputs in real-time
+            if (input.type === 'text' || input.tagName === 'TEXTAREA') {
+                input.value = input.value.replace(/\s+/g, ' ');
+            }
+            
+            // Limit and clean phone inputs in real-time
+            if (input.type === 'tel') {
+                input.value = input.value.replace(/[^\d]/g, '').slice(0, 10);
             }
 
-            if (input.hasAttribute('required') && (!value || value === '')) {
+            let value = input.value;
+            
+            if (input.hasAttribute('required') && (!value || value.trim() === '')) {
                 isValid = false;
                 message = 'This field is required.';
             } else if (value !== '') {
-                if (input.type === 'email') {
+                if (input.id === 'customerName' || input.id === 'engineerName' || input.id === 'contactName') {
+                    const nameRegex = /^[a-zA-Z\s]+$/;
+                    if (!nameRegex.test(value)) {
+                        isValid = false;
+                        message = 'Name can only contain alphabetic characters and spaces.';
+                    } else if (value.trim().length < 2) {
+                        isValid = false;
+                        message = 'Name must be at least 2 characters long.';
+                    } else if (value.trim().length > 50) {
+                        isValid = false;
+                        message = 'Name cannot exceed 50 characters.';
+                    }
+                } else if (input.type === 'email') {
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(value)) {
+                    if (!emailRegex.test(value.trim())) {
                         isValid = false;
                         message = 'Please enter a valid email address.';
                     }
                 } else if (input.type === 'tel') {
-                    const normalizedPhone = value.replace(/[-+()\s]/g, '');
-                    const phoneRegex = /^\d{10,15}$/;
-                    if (!phoneRegex.test(normalizedPhone)) {
+                    if (value.length !== 10) {
                         isValid = false;
-                        message = 'Please enter a valid 10 to 15-digit phone number.';
-                    }
-                } else if (input.id === 'customerName' || input.id === 'engineerName' || input.id === 'contactName') {
-                    if (value.length < 2) {
-                        isValid = false;
-                        message = 'Name must be at least 2 characters long.';
-                    } else if (value.length > 50) {
-                        isValid = false;
-                        message = 'Name cannot exceed 50 characters.';
+                        message = 'Mobile number must be exactly 10 digits.';
                     }
                 } else if (input.type === 'file') {
                     const files = input.files;
@@ -237,15 +246,15 @@ document.addEventListener('DOMContentLoaded', function() {
         inputs.forEach(input => {
             input.addEventListener('input', () => {
                 validateField(input);
-                checkFormValidity();
             });
             input.addEventListener('change', () => {
                 validateField(input);
-                checkFormValidity();
             });
             input.addEventListener('blur', () => {
+                if (input.type !== 'file') {
+                    input.value = input.value.trim();
+                }
                 validateField(input);
-                checkFormValidity();
             });
         });
 
