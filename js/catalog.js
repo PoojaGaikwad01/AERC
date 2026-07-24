@@ -137,7 +137,7 @@ const PRODUCTS_DATA = [
         name: "Industrial Blast Freezers & Shock Chillers",
         category: "cold-chain",
         subcategory: "Refrigeration",
-        image: "assets/images/slider_cold_chain.png",
+        image: "assets/images/cold_room.png",
         brands: ["Blue Star", "Guntner", "Blue Cold", "Bitzer"],
         shortDesc: "High-airflow shock freezers to drop core food temperatures rapidly to -18°C, arresting bacterial growth.",
         overview: "AERC specializes in shock-freezing solutions. Our industrial blast freezers circulate high-velocity air at -35°C to freeze food items rapidly. This quick freezing prevents large ice crystal formations, preserving food cell structures, textures, and vitamins.",
@@ -267,7 +267,7 @@ const PRODUCTS_DATA = [
         name: "Air-Cooled & Water-Cooled Condensing Units",
         category: "refrigeration",
         subcategory: "Compressors",
-        image: "assets/images/hero_slide_5.png",
+        image: "assets/images/compressor_scroll.png",
         brands: ["Copeland", "Danfoss", "Tecumseh", "Bitzer", "Blue Cold", "Approcool"],
         shortDesc: "Complete outdoor CDU kits featuring high-airflow fans, compressors, and receiver tanks.",
         overview: "AERC offers complete pre-assembled condensing unit (CDU) kits. Engineered with Copeland or Danfoss compressors, these kits include copper condenser loops, weather-proof enclosures, air fan assemblies, filters, and safety switches. Perfect for walk-in cold rooms.",
@@ -319,7 +319,7 @@ const PRODUCTS_DATA = [
         name: "Dixell Digital Controllers & Process Sensors",
         category: "hvac-components",
         subcategory: "Controllers",
-        image: "assets/images/hero_slide_6.png",
+        image: "assets/images/hvac_components.png",
         brands: ["Dixell (Emerson)", "Multispan", "Honeywell", "PVR Controls"],
         shortDesc: "Digital electronic process controllers, temperature indicators, and telemetry data loggers.",
         overview: "AERC distributes Dixell (Emerson) electronic controllers and Multispan process indicators. These digital instruments track temperature cycles, manage compressor defrost intervals, and sound telemetry alarms during cooling failures.",
@@ -345,7 +345,7 @@ const PRODUCTS_DATA = [
         name: "Rajco Premium VRF-Grade Copper Tubes",
         category: "hvac-components",
         subcategory: "HVAC Spares",
-        image: "assets/images/slider_engineering.png",
+        image: "assets/images/hvac_components.png",
         brands: ["Rajco Metal Industries"],
         shortDesc: "VRF-grade seamless copper tubes, pancake coils, and high-pressure copper fittings.",
         overview: "We distribute Rajco Metal Industries premium copper pipes and fittings. Manufactured using seamless drawing processes and certified for high-pressure R-410a/R-32 refrigerant operations, these pipes feature uniform wall thickness and excellent bendability.",
@@ -371,7 +371,7 @@ const PRODUCTS_DATA = [
         name: "BlueCold Evaporator Coils & Unit Coolers",
         category: "refrigeration",
         subcategory: "Refrigeration Eq",
-        image: "assets/images/hero_slide_3.png",
+        image: "assets/images/cold_room.png",
         brands: ["BlueCold", "Guntner", "Approcool", "Bitzer"],
         shortDesc: "High-efficiency cold storage evaporators and unit coolers with gold fin coils.",
         overview: "BlueCold Evaporators sourced by AERC are designed for modular cold rooms and blast freezers. Engineered with high-airflow fans, inner-grooved copper loops, and anti-corrosive hydrophilic blue/gold fin coatings, they maintain strict humidity control.",
@@ -647,30 +647,32 @@ function renderProducts() {
     } else {
         grid.innerHTML = paginatedList.map(product => {
             return `
-                <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll animated">
-                    <div class="product-card d-flex flex-column h-100 justify-content-between">
-                        <div>
-                            <div class="product-img-wrapper">
-                                <img src="${product.image}" class="product-img" alt="${product.name}">
+                <div class="col-12 mb-4 animate-on-scroll animated">
+                    <div class="product-card p-0 shadow-sm border rounded-4 bg-white overflow-hidden hover-elevation">
+                        <div class="row g-0 align-items-center">
+                            <!-- Left Side: Product Image -->
+                            <div class="col-lg-5 col-12 text-center bg-white border-end-lg p-4" style="height: 320px; display: flex; align-items: center; justify-content: center;">
+                                <img src="${product.image}" class="product-img" alt="${product.name}" style="max-height: 250px; max-width: 100%; object-fit: contain;" loading="lazy">
                             </div>
-                            <div class="product-body">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="product-cat">${product.category.toUpperCase().replace('-', ' ')}</span>
-                                    <span class="badge bg-light text-primary border" style="font-size: 0.75rem; font-weight: 600;">${product.subcategory}</span>
+                            <!-- Right Side: Details & Content -->
+                            <div class="col-lg-7 col-12 p-4 p-md-5 d-flex flex-column justify-content-between" style="min-height: 320px;">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="product-cat">${product.category.toUpperCase().replace('-', ' ')}</span>
+                                        <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">${product.subcategory}</span>
+                                    </div>
+                                    <h3 class="product-title font-weight-bold mb-3" style="font-size: 1.4rem; color: var(--color-text-heading);">${product.name}</h3>
+                                    <p class="product-desc text-muted mb-4" style="font-size: 0.98rem; line-height: 1.6;">${product.shortDesc}</p>
+                                    
+                                    <div class="mb-4 small">
+                                        <strong class="text-heading">Key Brands Supplied:</strong> 
+                                        <span class="text-muted">${product.brands.join(', ')}</span>
+                                    </div>
                                 </div>
-                                <h3 class="product-title font-weight-bold" style="font-size: 1.15rem; color: var(--color-text-heading);">${product.name}</h3>
-                                <p class="product-desc text-muted mb-3">${product.shortDesc}</p>
-                                
-                                <div class="mb-3 small">
-                                    <strong class="text-heading">Key Brands:</strong> 
-                                    <span class="text-muted">${product.brands.join(', ')}</span>
+                                <div class="d-flex gap-3">
+                                    <button class="btn btn-primary-custom px-4" onclick="openDetailsModal('${product.id}')">View Full Technical Details</button>
+                                    <button class="btn btn-outline-primary px-4" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-product-name="${product.name}"><i class="fa-solid fa-paper-plane me-2"></i>Request Wholesale Quote</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="p-4 pt-0 border-top bg-light-custom text-center mt-auto">
-                            <div class="d-flex gap-2 mt-3">
-                                <button class="btn btn-sm btn-primary-custom flex-grow-1" onclick="openDetailsModal('${product.id}')">View Details</button>
-                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-product-name="${product.name}"><i class="fa-solid fa-paper-plane"></i></button>
                             </div>
                         </div>
                     </div>

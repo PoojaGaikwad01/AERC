@@ -120,19 +120,219 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 7. Contact Form Validation and Submission
-    const contactForm = document.getElementById('aercContactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+    // 7. Robust Form Validation, Security Sanitization & Anti-Submissions System
+    function initFormValidation(formId, successMessage) {
+        const form = document.getElementById(formId);
+        if (!form) return;
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const inputs = form.querySelectorAll('input, select, textarea');
+
+        function sanitizeInput(str) {
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#x27;')
+                .replace(/\//g, '&#x2F;');
+        }
+
+        function validateField(input) {
+            let isValid = true;
+            let message = '';
+            let value = input.value;
+            
+            if (input.type !== 'file') {
+                value = value.replace(/\s+/g, ' ').trim();
+            }
+
+            if (input.hasAttribute('required') && (!value || value === '')) {
+                isValid = false;
+                message = 'This field is required.';
+            } else if (value !== '') {
+                if (input.type === 'email') {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        isValid = false;
+                        message = 'Please enter a valid email address.';
+                    }
+                } else if (input.type === 'tel') {
+                    const normalizedPhone = value.replace(/[-+()\s]/g, '');
+                    const phoneRegex = /^\d{10,15}$/;
+                    if (!phoneRegex.test(normalizedPhone)) {
+                        isValid = false;
+                        message = 'Please enter a valid 10 to 15-digit phone number.';
+                    }
+                } else if (input.id === 'customerName' || input.id === 'engineerName' || input.id === 'contactName') {
+                    if (value.length < 2) {
+                        isValid = false;
+                        message = 'Name must be at least 2 characters long.';
+                    } else if (value.length > 50) {
+                        isValid = false;
+                        message = 'Name cannot exceed 50 characters.';
+                    }
+                } else if (input.type === 'file') {
+                    const files = input.files;
+                    if (files && files.length > 0) {
+                        const file = files[0];
+                        const maxSizeBytes = 5 * 1024 * 1024;
+                        const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png', 'image/jpg'];
+                        
+                        if (file.size > maxSizeBytes) {
+                            isValid = false;
+                            message = 'File size exceeds the 5MB limit.';
+                        } else if (!allowedTypes.includes(file.type)) {
+                            isValid = false;
+                            message = 'Only PDF and image files (JPG, PNG) are allowed.';
+                        }
+                    }
+                }
+            }
+
+            if (!isValid) {
+                input.classList.remove('is-valid');
+                input.classList.add('is-invalid');
+                let errEl = input.parentNode.querySelector('.invalid-feedback');
+                if (!errEl) {
+                    errEl = document.createElement('div');
+                    errEl.className = 'invalid-feedback';
+                    input.parentNode.appendChild(errEl);
+                }
+                errEl.textContent = message;
+                
+                if (input.type === 'file') {
+                    const wrapper = form.querySelector('.file-upload-wrapper');
+                    if (wrapper) {
+                        wrapper.style.borderColor = '#dc3545';
+                        const text = wrapper.querySelector('p');
+                        if (text) text.textContent = message;
+                    }
+                }
+            } else {
+                input.classList.remove('is-invalid');
+                if (value !== '') {
+                    input.classList.add('is-valid');
+                } else {
+                    input.classList.remove('is-valid');
+                }
+                let errEl = input.parentNode.querySelector('.invalid-feedback');
+                if (errEl) errEl.remove();
+
+                if (input.type === 'file') {
+                    const wrapper = form.querySelector('.file-upload-wrapper');
+                    if (wrapper) {
+                        wrapper.style.borderColor = '#28a745';
+                        const text = wrapper.querySelector('p');
+                        const files = input.files;
+                        if (text && files && files.length > 0) {
+                            text.textContent = `Selected: ${files[0].name}`;
+                        }
+                    }
+                }
+            }
+            return isValid;
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener('input', () => {
+                validateField(input);
+                checkFormValidity();
+            });
+            input.addEventListener('change', () => {
+                validateField(input);
+                checkFormValidity();
+            });
+            input.addEventListener('blur', () => {
+                validateField(input);
+                checkFormValidity();
+            });
+        });
+
+        function checkFormValidity() {
+            let formIsValid = true;
+            inputs.forEach(input => {
+                if (input.hasAttribute('required') && (!input.value || input.value.trim() === '')) {
+                    formIsValid = false;
+                }
+                if (input.classList.contains('is-invalid')) {
+                    formIsValid = false;
+                }
+            });
+            if (submitBtn) {
+                if (formIsValid) {
+                    submitBtn.removeAttribute('disabled');
+                    submitBtn.style.opacity = '1';
+                } else {
+                    submitBtn.setAttribute('disabled', 'true');
+                    submitBtn.style.opacity = '0.65';
+                }
+            }
+            return formIsValid;
+        }
+
+        checkFormValidity();
+
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            if (validateForm(contactForm)) {
-                // Mock success alert (Premium style)
-                showFormAlert(contactForm, 'success', 'Thank you! Your enquiry has been received. Our sales team will get back to you shortly.');
-                contactForm.reset();
+            let allValid = true;
+            inputs.forEach(input => {
+                if (!validateField(input)) {
+                    allValid = false;
+                }
+            });
+            if (!allValid) {
+                showFormAlert(form, 'danger', 'Please correct the errors in the form before submitting.');
+                return;
+            }
+            inputs.forEach(input => {
+                if (input.type !== 'file') {
+                    input.value = sanitizeInput(input.value.replace(/\s+/g, ' ').trim());
+                }
+            });
+            if (submitBtn) {
+                submitBtn.setAttribute('disabled', 'true');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Submitting...';
+                setTimeout(() => {
+                    showFormAlert(form, 'success', successMessage);
+                    form.reset();
+                    inputs.forEach(inp => {
+                        inp.classList.remove('is-valid', 'is-invalid');
+                    });
+                    const wrapper = form.querySelector('.file-upload-wrapper');
+                    if (wrapper) {
+                        wrapper.style.borderColor = '';
+                        const text = wrapper.querySelector('p');
+                        if (text) text.textContent = 'Click to upload or drag & drop';
+                    }
+                    submitBtn.innerHTML = originalText;
+                    checkFormValidity();
+                }, 1500);
             }
         });
     }
 
+    function showFormAlert(form, type, message) {
+        const existingAlert = form.querySelector('.alert');
+        if (existingAlert) existingAlert.remove();
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-${type === 'success' ? 'success' : 'danger'} mt-3`;
+        alertDiv.role = 'alert';
+        alertDiv.textContent = message;
+        form.appendChild(alertDiv);
+        alertDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Initialize Active Forms Validation
+    initFormValidation('aercContactForm', 'Thank you! Your enquiry has been received. Our sales team will coordinate load capacities and prices with you shortly.');
+    initFormValidation('aercProductRegistrationForm', 'Success! Your product registration has been submitted successfully. A confirmation email has been sent.');
+    initFormValidation('aercInstallationRequestForm', 'Success! Your technical consultation request has been logged. Our sizing coordinator will contact you shortly.');
+    initFormValidation('catalogEnquiryForm', 'Thank you! Your wholesale pricing and sizing enquiry has been submitted. Our sales team will get back to you shortly.');
+    initFormValidation('aercServiceRequestForm', 'Success! Your service request has been booked. Our coordinator will contact you shortly.');
+    initFormValidation('aercAmcRequestForm', 'Success! Your AMC enquiry has been received. Our sales engineer will share a contract quote.');
+
+    // 8. Footer Newsletter Form
     const footerForm = document.getElementById('aercFooterNewsletter');
     if (footerForm) {
         footerForm.addEventListener('submit', function(e) {
@@ -145,13 +345,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 8. Support Page Tab Handling (safely kept for legacy query routing)
+    // 9. Support Page Tab Handling (safely kept for legacy query routing)
     const supportTabLinks = document.querySelectorAll('.support-tab-link');
     const supportPanes = document.querySelectorAll('.support-tab-pane');
-
     if (supportTabLinks.length > 0 && supportPanes.length > 0) {
         function switchSupportTab(tabId) {
-            // Update active link classes
             supportTabLinks.forEach(link => {
                 if (link.getAttribute('data-target') === tabId) {
                     link.classList.add('active');
@@ -159,8 +357,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     link.classList.remove('active');
                 }
             });
-
-            // Show/hide correct panes
             supportPanes.forEach(pane => {
                 if (pane.id === `support-pane-${tabId}`) {
                     pane.classList.add('show', 'active');
@@ -168,135 +364,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     pane.classList.remove('show', 'active');
                 }
             });
-
-            // Update URL hash/query without reload
             const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?tab=' + tabId;
             window.history.pushState({path:newurl},'',newurl);
         }
-
-        // Add click events to links
         supportTabLinks.forEach(link => {
             link.addEventListener('click', function() {
                 const target = this.getAttribute('data-target');
                 switchSupportTab(target);
             });
         });
-
-        // Check for URL query param on page load
         const urlParams = new URLSearchParams(window.location.search);
         const activeTab = urlParams.get('tab');
         if (activeTab) {
-            // Check if tab exists
             const tabExists = Array.from(supportTabLinks).some(link => link.getAttribute('data-target') === activeTab);
             if (tabExists) {
                 switchSupportTab(activeTab);
             }
         }
-    }
-
-    // 9. Support Forms submissions (runs on dedicated pages)
-    const registrationForm = document.getElementById('aercProductRegistrationForm');
-    if (registrationForm) {
-        registrationForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (validateForm(registrationForm)) {
-                showFormAlert(registrationForm, 'success', 'Success! Your product registration has been submitted successfully. A confirmation email has been sent.');
-                registrationForm.reset();
-            }
-        });
-    }
-
-    const serviceRequestForm = document.getElementById('aercServiceRequestForm');
-    if (serviceRequestForm) {
-        serviceRequestForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (validateForm(serviceRequestForm)) {
-                showFormAlert(serviceRequestForm, 'success', 'Success! Your service request has been booked. Our technical coordinator will call you to confirm the visit.');
-                serviceRequestForm.reset();
-            }
-        });
-    }
-
-    const installationRequestForm = document.getElementById('aercInstallationRequestForm');
-    if (installationRequestForm) {
-        installationRequestForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (validateForm(installationRequestForm)) {
-                showFormAlert(installationRequestForm, 'success', 'Success! Your installation request has been logged. We will contact you shortly.');
-                installationRequestForm.reset();
-            }
-        });
-    }
-
-    const amcEnquiryForm = document.getElementById('aercAmcRequestForm');
-    if (amcEnquiryForm) {
-        amcEnquiryForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (validateForm(amcEnquiryForm)) {
-                showFormAlert(amcEnquiryForm, 'success', 'Success! Your AMC enquiry has been received. Our sales engineer will share a customized contract quote.');
-                amcEnquiryForm.reset();
-            }
-        });
-    }
-
-    // Helper functions
-    function validateForm(form) {
-        let isValid = true;
-        const requiredInputs = form.querySelectorAll('[required]');
-        
-        requiredInputs.forEach(input => {
-            // Remove previous error styling/message
-            input.classList.remove('is-invalid');
-            const errEl = input.parentNode.querySelector('.invalid-feedback');
-            if (errEl) errEl.remove();
-
-            if (input.value.trim() === '') {
-                isValid = false;
-                showInputError(input, 'This field is required.');
-            } else if (input.type === 'email' && !validateEmail(input.value)) {
-                isValid = false;
-                showInputError(input, 'Please enter a valid email address.');
-            } else if (input.type === 'tel' && !validatePhone(input.value)) {
-                isValid = false;
-                showInputError(input, 'Please enter a valid 10-digit phone number.');
-            }
-        });
-
-        return isValid;
-    }
-
-    function showInputError(input, message) {
-        input.classList.add('is-invalid');
-        const feedback = document.createElement('div');
-        feedback.className = 'invalid-feedback';
-        feedback.textContent = message;
-        input.parentNode.appendChild(feedback);
-    }
-
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-
-    function validatePhone(phone) {
-        const re = /^\d{10}$/; // Basic 10-digit phone validation
-        return re.test(phone.replace(/[-+()\s]/g, ''));
-    }
-
-    function showFormAlert(form, type, message) {
-        // Remove existing alert
-        const existingAlert = form.querySelector('.alert');
-        if (existingAlert) existingAlert.remove();
-
-        const alertDiv = document.createElement('div');
-        alertDiv.className = `alert alert-${type === 'success' ? 'success' : 'danger'} mt-3`;
-        alertDiv.role = 'alert';
-        alertDiv.textContent = message;
-        
-        form.appendChild(alertDiv);
-        
-        // Auto scroll to alert
-        alertDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
     // 10. Hero Slider Manager
@@ -392,4 +476,140 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initialize autoplay
         startAutoplay();
     }
+
+    // 10. Mobile Mega Menu Accordion Toggle
+    const megaMenuParent = document.querySelector('.nav-item.has-mega-menu');
+    if (megaMenuParent) {
+        const megaMenuLink = megaMenuParent.querySelector('a.nav-link');
+        if (megaMenuLink) {
+            megaMenuLink.addEventListener('click', function(e) {
+                if (window.innerWidth < 992) {
+                    if (!megaMenuParent.classList.contains('show-mobile')) {
+                        e.preventDefault();
+                        megaMenuParent.classList.add('show-mobile');
+                    } else {
+                        // Already open: let it navigate to products.html if clicked again
+                    }
+                }
+            });
+        }
+    }
+
+    // Close mobile mega menu if clicking outside
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth < 992 && megaMenuParent && !megaMenuParent.contains(e.target)) {
+            megaMenuParent.classList.remove('show-mobile');
+        }
+    });
+
+    // 11. Dynamic JSON-LD SEO Schema Injection
+    function injectJSONLD() {
+        const path = window.location.pathname;
+        const page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+        const schemas = [];
+
+        // Organization Schema (Global)
+        const orgSchema = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Ajanta Electric & Refrigeration Co. (AERC)",
+            "url": "https://www.ajantaelectric.com",
+            "logo": "https://www.ajantaelectric.com/assets/images/logo_left.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-98234-44447",
+                "contactType": "sales",
+                "areaServed": "IN",
+                "availableLanguage": ["en", "hi", "mr"]
+            },
+            "sameAs": [
+                "https://www.facebook.com/ajantaelectric",
+                "https://www.instagram.com/ajanta_electric",
+                "https://youtube.com/channel/UCgGjAWxnyXEsXDPetMmoe_w"
+            ]
+        };
+        schemas.push(orgSchema);
+
+        // WebSite & LocalBusiness Schema (Homepage)
+        if (page === 'index.html') {
+            const websiteSchema = {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Ajanta Electric & Refrigeration Co.",
+                "url": "https://www.ajantaelectric.com",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://www.ajantaelectric.com/products.html?search={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            };
+            schemas.push(websiteSchema);
+
+            const businessSchema = {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Ajanta Electric & Refrigeration Co.",
+                "image": "https://www.ajantaelectric.com/assets/images/slider_showcase.png",
+                "telephone": "+91-98234-44447",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Ground floor, Mini Mall, B002- B005, C type Building, Sillekhana Samarth Nagar Road",
+                    "addressLocality": "Chhatrapati Sambhajinagar (Aurangabad)",
+                    "addressRegion": "Maharashtra",
+                    "postalCode": "431001",
+                    "addressCountry": "IN"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "19.8732",
+                    "longitude": "75.3284"
+                },
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+                    ],
+                    "opens": "10:00",
+                    "closes": "19:00"
+                }
+            };
+            schemas.push(businessSchema);
+        }
+
+        // FAQ Schema (FAQs page)
+        if (page === 'faqs.html') {
+            const faqSchema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Are you an authorized dealer?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, AERC is an authorized channel partner, wholesaler, and SSD dealer for global engineering brands like Daikin, Copeland, Danfoss, and others."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you provide installation services?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, AERC provides full technical support, sizing consultations, and coordinator deployment for industrial installations."
+                        }
+                    }
+                ]
+            };
+            schemas.push(faqSchema);
+        }
+
+        // Inject schemas into document head
+        schemas.forEach(schema => {
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.text = JSON.stringify(schema);
+            document.head.appendChild(script);
+        });
+    }
+    injectJSONLD();
 });
