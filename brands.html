@@ -144,549 +144,814 @@
         </div>
     </div>
 
-    <!-- Associations Directory -->
-    <section class="section-padding">
+    <!-- Main ecosystem directory section -->
+    <section class="section-padding bg-light">
         <div class="container">
-            <div class="text-center mb-5 animate-on-scroll">
-                <p class="lead">As authorized channel partners, Wholesalers, SSD distributors and dealers, we guarantee 100% genuine components at competitive commercial pricing.</p>
+            
+            <!-- Header Lead -->
+            <div class="text-center mb-5 max-width-700 mx-auto">
+                <span class="section-subtitle">Partner Ecosystem</span>
+                <h2 class="section-title">Verified Sourcing & Sizing Associates</h2>
+                <p class="text-muted mt-3">Every association is authenticated and audited directly against the AERC Company Profile. We source 100% genuine products directly from global HVAC-R engineering corporations.</p>
             </div>
 
-            <!-- Group 1: Air Conditioning Associations -->
-            <div class="mb-5 animate-on-scroll">
-                <h3 class="border-bottom pb-2 mb-4 text-primary"><i class="fa-solid fa-wind me-2"></i> Air Conditioning Associations</h3>
-                <div class="row">
-                    <!-- Daikin -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_daikin.png" alt="Daikin" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Daikin Airconditioning</h4>
+            <!-- Toolbar (Search & Category Filters) -->
+            <div class="card p-4 shadow-sm border rounded-4 mb-5 bg-white">
+                <div class="row align-items-center gy-4">
+                    <!-- Search Bar -->
+                    <div class="col-lg-4">
+                        <div class="associate-search-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="associate-search-bar" class="form-control" placeholder="Search by name, product, or keywords...">
+                        </div>
+                    </div>
+                    <!-- Filter Chips -->
+                    <div class="col-lg-8">
+                        <div class="d-flex flex-wrap gap-2 justify-content-lg-end" id="associate-filter-container">
+                            <button class="associate-filter-chip active" data-filter="all">All</button>
+                            <button class="associate-filter-chip" data-filter="air-conditioning">Air Conditioning</button>
+                            <button class="associate-filter-chip" data-filter="cold-chain">Cold Chain</button>
+                            <button class="associate-filter-chip" data-filter="compressors">Compressors</button>
+                            <button class="associate-filter-chip" data-filter="controls">Controls</button>
+                            <button class="associate-filter-chip" data-filter="heat-exchangers">Heat Exchangers</button>
+                            <button class="associate-filter-chip" data-filter="electrical">Electrical</button>
+                            <button class="associate-filter-chip" data-filter="accessories">Accessories</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Directory Grid -->
+            <div class="row" id="associates-grid">
+                
+                <!-- 1. Daikin -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="daikin airconditioning india pvt ltd" data-products="vrv vrf split cassette ductable ac units" data-desc="sourcing model energy saving cooling">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_daikin.png" alt="Daikin" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Daikin</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Daikin Airconditioning India Pvt. Ltd. Sourcing and model selection for energy-saving multi-zone cooling systems, VRV/VRF, cassettes, and ductable units.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> VRV/VRF Systems, Cassette ACs, Ductable Units, Splits
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Corporate Workspace, Premium Villas, Retail Stores
-                                </div>
-                            </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Mitsubishi Electric -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_mitsubishi_electric.png" alt="Mitsubishi Electric" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Mitsubishi Electric</h4>
-                                <p class="small text-muted mb-2">Mitsubishi Electric India Pvt. Ltd. High-performance inverter split ACs and modular VRF City Multi outdoor cooling loops.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Inverter Split ACs, City Multi VRF Systems, Cassette Units
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Luxury Apartments, Commercial Establishments
+                                <div class="small mb-1"><strong>Products:</strong> VRV/VRF Systems, Cassette ACs, Ductable Units, Splits</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Corporate Workspace, Premium Villas, Retail Stores</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Daikin" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Mitsubishi Heavy Duty -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_mitsubishi_heavy.png" alt="Mitsubishi Heavy Duty" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Mitsubishi Heavy Duty</h4>
+                </div>
+
+                <!-- 2. Mitsubishi Electric -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="mitsubishi electric india pvt ltd" data-products="inverter splits vrf city multi ac units" data-desc="premium japanese engineering design">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_mitsubishi_electric.png" alt="Mitsubishi Electric" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Mitsubishi Electric</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Mitsubishi Electric India Pvt. Ltd. Premium Japanese engineering inverter wall splits and modular VRF City Multi units.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Inverter Split ACs, City Multi VRF Systems, Cassette Units</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Luxury Apartments, Commercial Establishments, Laboratories</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Mitsubishi%20Electric" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Mitsubishi Heavy Duty -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="mitsubishi heavy duty industries ltd" data-products="heavy duty ac units vrf cassette fan coils fcu" data-desc="premium high capacity cooling systems">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_mitsubishi_heavy.png" alt="Mitsubishi Heavy" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Mitsubishi Heavy</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Authorized Dealer</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Mitsubishi Heavy Duty Industries Ltd. Premium heavy-duty splits, cassette units, and high-capacity Variable Refrigerant Flow (VRF) systems.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Heavy Duty ACs, VRF Systems, Fan Coils (FCUs)
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Commercial Malls, High-ambient Offices, Factories
-                                </div>
-                            </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Samsung -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_samsung.png" alt="Samsung" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Samsung Climate Solutions</h4>
-                                <p class="small text-muted mb-2">Samsung India Electronics Pvt. Ltd. Innovative WindFree wall splits, modular DVM S VRF loops, and 360-degree circular cassette systems.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> WindFree Splits, DVM S VRF, 360 Cassette ACs
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Creative Office Studios, Modern Homes
+                                <div class="small mb-1"><strong>Products:</strong> Heavy Duty ACs, VRF Systems, Fan Coils (FCUs)</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Commercial Malls, High-ambient Offices, Factories</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Mitsubishi%20Heavy" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Carrier/Toshiba -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_toshiba.png" alt="Toshiba" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Toshiba AC Systems</h4>
-                                <p class="small text-muted mb-2">Distributed by Carrier Air Conditioning & Refrigeration Ltd. High-reliability inverter splits, commercial ductables, and VRF systems.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Inverter Splits, Ductables, VRF Outdoor Units
+                </div>
+
+                <!-- 4. Samsung -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="samsung india electronics pvt ltd" data-products="windfree split ac units dvm s vrf 360 cassette" data-desc="innovative climate solutions design">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_samsung.png" alt="Samsung" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
                                 </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Corporate Spaces, Hospitals, Residences
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Samsung</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Samsung India Electronics Pvt. Ltd. Innovative WindFree cooling split units and DVM S modular VRF air conditioning loops.</p>
+                                <div class="small mb-1"><strong>Products:</strong> WindFree Splits, DVM S VRF, 360 Cassette ACs</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Modern Offices, Premium Mansions, Creative Studios</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Samsung" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Carrier Midea -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_carrier_midea.png" alt="Carrier Midea" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Carrier Midea India</h4>
+                </div>
+
+                <!-- 5. Toshiba -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="carrier air conditioning refrigeration limited toshiba" data-products="inverter splits ductables vrf units" data-desc="premium air systems high reliability">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_toshiba.png" alt="Toshiba" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Toshiba</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Sourcing Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Distributed by Carrier Air Conditioning & Refrigeration Ltd. Toshiba premium inverter split air conditioners and high-capacity VRF systems.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Inverter Splits, Ductables, VRF Outdoor Units</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Office Spaces, Apartments, Premium Boutiques</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Toshiba" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Carrier Midea -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="carrier midea india pvt ltd" data-products="fan coils fcu rotary compressors ductables condensing ac units" data-desc="water chillers vrf modular">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_carrier_midea.png" alt="Carrier Midea" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Carrier Midea</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Carrier Midea India Pvt. Ltd. DC Fan Coil Units (FCU), rotary compressors, ductables, and air/water cooled condensing units.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Packaged Ductables, Fan Coils (FCUs), Water Chillers, VRF
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Manufacturing Halls, Multi-storey Buildings
-                                </div>
-                            </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Hitachi -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_hitachi.png" alt="Hitachi" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Hitachi Cooling Systems</h4>
-                                <p class="small text-muted mb-2">Johnson Controls-Hitachi Air Conditioning India Ltd. Energy-efficient commercial VRF, ductable split ACs, and high-performance fan coil units.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Commercial VRF, Ductable Split ACs, Cassette ACs
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Corporate Headquarters, Hotels
+                                <div class="small mb-1"><strong>Products:</strong> Packaged Ductables, Fan Coils (FCUs), Water Chillers, VRF</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Manufacturing Halls, Multi-storey Buildings, Shops</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Carrier%20Midea" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Blue Star -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_blue_star.png" alt="Blue Star" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Blue Star Limited</h4>
-                                <p class="small text-muted mb-2">Blue Star Limited. Leading commercial HVAC systems, packaged and ductable units, water chillers, and VRF loops.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> VRF Systems, Ductable ACs, Ceiling Cassette ACs, Chillers
+                </div>
+
+                <!-- 7. Hitachi -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="johnson controls-hitachi air conditioning india ltd" data-products="vrf systems ductable splits cassette ac units fan coil fcu" data-desc="highly efficient cooling scroll chillers">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_hitachi.png" alt="Hitachi" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
                                 </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Marriage Banquets, Hospitals, Sorter Corridors
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Hitachi</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Johnson Controls-Hitachi Air Conditioning India Ltd. Highly efficient VRF air conditioning loops, scroll chiller technology, and commercial fan coils.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Commercial VRF, Ductable Split ACs, Cassette ACs</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Corporate Hubs, Premium Hotels, Large Institutional Buildings</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Hitachi" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- LG -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_lg.png" alt="LG" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">LG Electronics</h4>
-                                <p class="small text-muted mb-2">LG Electronics India Pvt. Ltd. Dual inverter splits, Multi V VRF systems, rotary compressors, and high-ambient outdoor units.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Dual Inverter splits, Multi V VRF Outdoor units, Rotary Compressors
+                </div>
+
+                <!-- 8. Blue Star -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="blue star limited" data-products="vrf systems ductable ac cassette chillers coolers deep freezers cold storage" data-desc="central hvac bulk walk ins walkins">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_blue_star.png" alt="Blue Star" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
                                 </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Modern Homes, Retail Boutiques
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Blue Star</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Blue Star Limited. Leading commercial HVAC central air conditioning, packaged units, chillers, and bulk cold room storage solutions.</p>
+                                <div class="small mb-1"><strong>Products:</strong> VRF Systems, Ductable ACs, Ceiling Cassette ACs, Chillers</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Cold Storage Warehouses, Marriage Halls, Hospitals</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Blue%20Star" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Panasonic -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_panasonic.png" alt="Panasonic" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Panasonic Climate</h4>
-                                <p class="small text-muted mb-2">Panasonic India Pvt. Ltd. Smart inverter split air conditioners and commercial Variable Refrigerant Flow (VRF) systems.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Smart Inverter splits, commercial VRF units, filters
+                </div>
+
+                <!-- 9. LG -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="lg electronics india pvt ltd" data-products="dual inverter splits multi v vrf outdoor units rotary compressors" data-desc="climate control smart homes">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_lg.png" alt="LG" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
                                 </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Modern Office spaces, Retail outlets
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">LG Electronics</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Authorized Dealer</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">LG Electronics India Pvt. Ltd. Smart residential dual inverter split systems, commercial Multi V VRF, and rotary compressors.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Dual Inverter splits, Multi V VRF Outdoor units, Compressors</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Modern Homes, Retail Stores, Office Blocks</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20LG" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Voltas -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_voltas.png" alt="Voltas" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Voltas (Tata Enterprise)</h4>
+                </div>
+
+                <!-- 10. Panasonic -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="panasonic india pvt ltd" data-products="smart inverter splits commercial vrf units cassette ac systems" data-desc="japanese high efficiency smart controls">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_panasonic.png" alt="Panasonic" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Panasonic</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Panasonic India Pvt. Ltd. Smart inverter wall splits, cassette units, and modular Variable Refrigerant Flow (VRF) systems.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Inverter splits, commercial VRF units, Cassette ACs</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Modern Office spaces, Retail outlets, Residences</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Panasonic" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Voltas -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="voltas limited tata enterprise" data-products="split window ac systems ductable units water coolers bottle cooler cdu" data-desc="trusted cooling giant tata group robust">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_voltas.png" alt="Voltas" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Voltas</h4>
+                                <span class="badge bg-soft-success px-3 py-1 rounded-pill small">SSD Wholesaler</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Voltas Limited. India's trusted cooling giant. Robust commercial ductable units, window and split ACs, and drinking water coolers.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Split & Window ACs, Ductable Systems, Water Coolers
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> High-ambient Factories, Office Complexes, Homes
+                                <div class="small mb-1"><strong>Products:</strong> Split & Window ACs, Ductable Systems, Water Coolers</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> High-ambient Factories, Office Complexes, Homes</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Voltas" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Cruise -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_cruise.png" alt="Cruise" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Cruise Appliances</h4>
+                </div>
+
+                <!-- 12. Cruise -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="cruise appliance pvt ltd cruise electric pvt ltd" data-products="wall splits fan coil units fcu chilled water cdu kits" data-desc="sleek air conditioning aesthetic design">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_cruise.png" alt="Cruise" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Cruise</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Cruise Appliance Pvt. Ltd. & Cruise Electric Pvt. Ltd. Sleek wall-mounted splits, chilled water Fan Coil Units (FCU), and condensing units.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Wall Splits, Fan Coil Units (FCU), Condensing Kits
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Restaurants, Hotels, Modern Residences
+                                <div class="small mb-1"><strong>Products:</strong> Wall Splits, Fan Coil Units (FCU), Condensing Kits</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Restaurants, Hotels, Modern Residences</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Cruise" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Whirlpool -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_whirlpool.png" alt="Whirlpool" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Whirlpool of India</h4>
+                </div>
+
+                <!-- 13. Whirlpool -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="air-conditioning" data-name="whirlpool of india ltd" data-products="residential splits rotary compressors spare parts" data-desc="home cooling appliances engineering spares">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_whirlpool.png" alt="Whirlpool" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Whirlpool</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Authorized Dealer</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Whirlpool of India Ltd. Quality residential split air conditioners, high-reliability rotary compressors, and OEM spares.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Split ACs, Rotary Compressors, spare parts
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Modern apartments, residential complexes
+                                <div class="small mb-1"><strong>Products:</strong> Split ACs, Rotary Compressors, OEM Spares</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Modern Apartments, Residential complexes, Catering Outlets</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=air-conditioning" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Whirlpool" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=air-conditioning" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Group 2: Cold Chain & Refrigeration -->
-            <div class="mb-5 animate-on-scroll">
-                <h3 class="border-bottom pb-2 mb-4 text-primary"><i class="fa-solid fa-temperature-arrow-down me-2"></i> Cold Chain & Refrigeration</h3>
-                <div class="row">
-                    <!-- Western -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_western.png" alt="Western Refrigeration" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Western Refrigeration</h4>
+                <!-- 14. Western Refrigeration -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="cold-chain" data-name="western refrigeration pvt ltd" data-products="deep freezers eutectic freezers visi-coolers upright chillers bar cabinets back bars ice machines" data-desc="commercial storage display cooling systems">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_western.png" alt="Western" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Western</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Authorized Dealer</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Western Refrigeration Pvt. Ltd. Premium deep freezers, eutectic freezers, upright display chillers, visi-coolers, and back bar cabinets.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Visi-Coolers, Chest Freezers, Upright Chillers, Back Bars
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Supermarkets, Grocery Stores, Pubs & Cafes
+                                <div class="small mb-1"><strong>Products:</strong> Visi-Coolers, Chest Freezers, Upright Chillers, Back Bars</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Supermarkets, Grocery Stores, Pubs & Cafes</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=refrigeration" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Western" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=refrigeration" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Hoshizaki -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_hoshizaki.png" alt="Hoshizaki" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Hoshizaki Ice Systems</h4>
+                </div>
+
+                <!-- 15. Hoshizaki -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="cold-chain" data-name="hoshizaki ice systems western refrigeration" data-products="crescent ice makers cube machines flakers under counter storage" data-desc="japanese premium ice systems food processing">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_hoshizaki.png" alt="Hoshizaki" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Hoshizaki</h4>
+                                <span class="badge bg-soft-secondary px-3 py-1 rounded-pill small">Sourcing Associate</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Distributed by Western Refrigeration. World-class cube ice machines, crescent ice makers, flakers, and under-counter commercial storage.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Cube Ice Machines, Flakers, Under-counter Storage
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Hospitality, Restaurants, Food Processing, Bars
+                                <div class="small mb-1"><strong>Products:</strong> Cube Ice Machines, Flakers, Under-counter Storage</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Hospitality, Restaurants, Food Processing, Bars, Hotels</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=refrigeration" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Hoshizaki" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=refrigeration" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- BlueCold -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_bluecold.png" alt="Blue Cold" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">BlueCold Refrigeration</h4>
+                </div>
+
+                <!-- 16. Blue Cold -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="cold-chain" data-name="blue cold refrigeration pvt ltd" data-products="blc series evaporators unit coolers blast freezer coils bitzer condensing units" data-desc="commercial cold room construction warehousing logistics">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_bluecold.png" alt="BlueCold" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">BlueCold</h4>
+                                <span class="badge bg-soft-success px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Blue Cold Refrigeration Pvt. Ltd. BLC Series evaporators, modular cold room cooling coils, unit coolers, and blast freezer systems.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> BLC Evaporators, Unit Coolers, Blast Air Evaporators
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Pharma Cold storage, Agricultural Warehouses
+                                <div class="small mb-1"><strong>Products:</strong> BLC Evaporators, Unit Coolers, Blast Air Evaporators</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Pharma Cold storage, Agricultural Warehouses, Logistics</div>
+                                <div class="d-flex gap-2">
+                                    <a href="bluecold.html" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Page</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20BlueCold" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="bluecold.html" class="btn-link-custom font-weight-bold mt-3 text-primary">View Associate Page <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Guntner -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_guntner.png" alt="Guntner" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Guntner AG</h4>
+                </div>
+
+                <!-- 17. Guntner -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="heat-exchangers" data-name="guntner ag co kg" data-products="evaporators heat exchangers air coolers condenser coils blast freezers" data-desc="heavy duty thermal systems food chain preservation">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_guntner.png" alt="Guntner" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Guntner</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Guntner AG & Co. KG. High-efficiency evaporators, process cooling heat exchangers, and commercial blast coolers for food chain execution.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Air Coolers, Defrost Evaporators, Shell & Tube Condensers
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Blast Freezers, Milk Pasteurization Loops
+                                <div class="small mb-1"><strong>Products:</strong> Air Coolers, Defrost Evaporators, Shell & Tube Condensers</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Blast Freezers, Milk Pasteurization Loops, Cold Storage</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=cold-chain" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Guntner" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=cold-chain" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Approcool -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_approcool.png" alt="Approcool" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Approcool Aircon</h4>
+                </div>
+
+                <!-- 18. Approcool -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="cold-chain" data-name="approcool aircon private limited" data-products="condensing outdoor kits unit evaporators shell heat loops" data-desc="custom refrigeration modules cold storage rooms">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_approcool.png" alt="Approcool" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Approcool</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Approcool Aircon Private Limited. Customized outdoor condensing units, air-cooled refrigeration kits, and unit evaporators.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Outdoor CDU Kits, Cold Room Evaporators, Shell Heat Loops
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Custom Cold Storage layouts, Process Chilling
+                                <div class="small mb-1"><strong>Products:</strong> Outdoor CDU Kits, Cold Room Evaporators, Shell Heat Loops</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Custom Cold Storage layouts, Process Chilling</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=refrigeration" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Approcool" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=refrigeration" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Usha -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_usha.png" alt="Usha" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Usha International</h4>
+                </div>
+
+                <!-- 19. Usha -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="cold-chain" data-name="usha international ltd" data-products="ss water coolers dispensers heaters exhaust fans pedestal table" data-desc="public infrastructure cooling storage drinking water">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_usha.png" alt="Usha" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Usha</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Authorized Dealer</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Usha International Ltd. Reliable SS304 drinking water coolers, institutional water dispensers, water heaters, and ventilation fans.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> SS Water Coolers, Water Dispensers, Industrial Exhaust Fans
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Factory canteens, School Complexes, Railway sites
+                                <div class="small mb-1"><strong>Products:</strong> SS Water Coolers, Water Dispensers, Industrial Exhaust Fans</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Factory canteens, School Complexes, Railway sites</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=refrigeration" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Usha" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=refrigeration" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Godrej -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_godrej.png" alt="Godrej" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Godrej Refrigeration</h4>
+                </div>
+
+                <!-- 20. Godrej -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="cold-chain" data-name="godrej boyce mfg co ltd" data-products="medical refrigeration chest freezers glass top islands compressors" data-desc="vaccine depots clinic storage ice cream display units">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_godrej.png" alt="Godrej" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Godrej</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Authorized Dealer</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Godrej & Boyce Mfg. Co. Ltd. Deep freezers, medical refrigeration, chest freezers, glass-top display islands, and hermetic compressors.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Chest Freezers, Glass Top Freezers, Medical Refrigerators
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Retail Outlets, Clinics, Storage Warehouses
+                                <div class="small mb-1"><strong>Products:</strong> Chest Freezers, Glass Top Freezers, Medical Refrigerators</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Retail Outlets, Clinics, Vaccine Depots, Ice Cream Outlets</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=refrigeration" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Godrej" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=refrigeration" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Group 3: Compressors & Controls -->
-            <div class="mb-5 animate-on-scroll">
-                <h3 class="border-bottom pb-2 mb-4 text-primary"><i class="fa-solid fa-gears me-2"></i> Compressors & Controls</h3>
-                <div class="row">
-                    <!-- Copeland -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_copeland.png" alt="Copeland" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Copeland Compressors</h4>
+                <!-- 21. Copeland -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="compressors" data-name="copeland emerson india private limited" data-products="scroll digital reciprocating compressors condensing units cdu heat pumps" data-desc="authorized ssd distributor refrigeration loops cooling">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_copeland.png" alt="Copeland" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Copeland</h4>
+                                <span class="badge bg-soft-success px-3 py-1 rounded-pill small">SSD Distributor</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
                                 <p class="small text-muted mb-2">Copeland India Private Limited. Authorized SSD partner. Scroll, digital scroll, and semi-hermetic reciprocating refrigeration compressors.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> ZB/ZF Refrigeration Scrolls, Reciprocating CDUs, Digital Scrolls
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Hypermarkets, Milk Chilling, Cold Rooms
-                                </div>
-                            </div>
-                            <a href="copeland.html" class="btn-link-custom font-weight-bold mt-3 text-primary">View Associate Page <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Danfoss -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_danfoss.png" alt="Danfoss" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Danfoss Controls</h4>
-                                <p class="small text-muted mb-2">Danfoss Industries Pvt. Ltd. High-reliability refrigeration controls, expansion valves, solenoids, pressure switches, and filter driers.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> T2/TE2 Expansion Valves, KP1/KP5 Pressure Switches, Filter Driers
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Condensing Assemblies, Industrial Refrigeration racks
+                                <div class="small mb-1"><strong>Products:</strong> ZB/ZF Refrigeration Scrolls, Reciprocating CDUs, Digital Scrolls</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Hypermarkets, Milk Chilling, Cold Rooms, Heating</div>
+                                <div class="d-flex gap-2">
+                                    <a href="copeland.html" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Page</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Copeland" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=hvac-components" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Tecumseh -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_tecumseh.png" alt="Tecumseh" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Tecumseh Products</h4>
-                                <p class="small text-muted mb-2">Tecumseh Products Company. Hermetic reciprocating compressors, condensing units, and spares for commercial display refrigeration.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Hermetic Compressors, FHP Condensing Units, Spares
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Visi-coolers, Chest Freezers, Ice Cube Machines
-                                </div>
-                            </div>
-                            <a href="products.html?cat=refrigeration" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Dixell -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_dixell.png" alt="Dixell" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Dixell Process Controls</h4>
-                                <p class="small text-muted mb-2">Dixell Make. Emerson digital temperature controllers, data loggers, defrost managers, and telemetry modules.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> XR Series Microcontrollers, Temperature Probes, RS485 Modules
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Cold Room Control Panels, Telecom Cooling
-                                </div>
-                            </div>
-                            <a href="products.html?cat=hvac-components" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Multispan -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_multispan.png" alt="Multispan" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Multispan Instruments</h4>
-                                <p class="small text-muted mb-2">Multispan Control Instruments Pvt. Ltd. Process indicators, multi-channel scanners, data loggers, and temperature controllers.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Process Indicators, Multi-channel Scanners, Control Dashboards
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Industrial Panel Wiring, Chilling capacity monitoring
-                                </div>
-                            </div>
-                            <a href="products.html?cat=hvac-components" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- PVR Controls / Sub-Zero -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_sub_zero.png" alt="Sub-Zero" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">PVR Controls (Sub-Zero)</h4>
-                                <p class="small text-muted mb-2">PVR Controls. Sub-Zero and Castle brand digital temperature microcontrollers, safety switches, and process control boards.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Digital Temperature Controllers, Data Loggers, Sensors
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Cold Room Panels, Refrigeration Cabinets
-                                </div>
-                            </div>
-                            <a href="products.html?cat=hvac-components" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Group 4: Components & Accessories -->
-            <div class="mb-5 animate-on-scroll">
-                <h3 class="border-bottom pb-2 mb-4 text-primary"><i class="fa-solid fa-screwdriver-wrench me-2"></i> Components & Accessories</h3>
-                <div class="row">
-                    <!-- SRF Floron -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_srf.png" alt="SRF" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">SRF Floron Gases</h4>
-                                <p class="small text-muted mb-2">Srf Limited {Fluorochemicals Business}. Floron high-purity refrigerant gases (R-22, R-134a, R-404a, R-407c, R-410a, R-32, R-600) and butane cans.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> R-32, R-134a, R-410a, R-404a, R-22 Cylinders & Tonners
+                <!-- 22. Danfoss -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="controls" data-name="danfoss industries pvt ltd" data-products="expansion valves solenoids safety switches pressure switches filter driers compressors" data-desc="danish refrigeration controls automation lines">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_danfoss.png" alt="Danfoss" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
                                 </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> AC Re-charging, Industrial cooling loops, Wholesaling
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Danfoss</h4>
+                                <span class="badge bg-soft-success px-3 py-1 rounded-pill small">SSD Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Danfoss Industries Pvt. Ltd. High-reliability refrigeration controls, expansion valves, solenoids, pressure switches, and filter driers.</p>
+                                <div class="small mb-1"><strong>Products:</strong> T2/TE2 Expansion Valves, KP1/KP5 Pressure Switches, Filter Driers</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Condensing Assemblies, Industrial Refrigeration racks</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Danfoss" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
                                 </div>
                             </div>
-                            <a href="products.html?cat=hvac-components" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Rajco Metal -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_rajco.png" alt="Rajco Metal" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Rajco Copper Tubes</h4>
-                                <p class="small text-muted mb-2">Rajco Metal Industries Pvt. Ltd. Seamless drawn copper pipes, pancake coils, and fittings for medical gas and VRF/VRV plumbing.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Seamless Copper Pipes, Pancake Coils, copper fittings
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> High-pressure VRF loops, Medical Gas Pipelines
-                                </div>
-                            </div>
-                            <a href="products.html?cat=hvac-components" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Honeywell -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_honeywell.png" alt="Honeywell" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Honeywell Automation</h4>
-                                <p class="small text-muted mb-2">Honeywell Automation India Limited. Digital fan coil unit (FCU) thermostats, modulating actuators, water flow switches, and spare loops.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> T6861 Thermostats, Modulating Valves, Water Flow switches
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Fan Coil Unit control, Building Automation
-                                </div>
-                            </div>
-                            <a href="products.html?cat=hvac-components" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Amyush Techno / Pixels -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="mb-3" style="height: 40px; display: flex; align-items: center;"><img src="assets/images/logos/logo_pixels.png" alt="Pixels" style="max-height: 35px; max-width: 100%;"></div>
-                                <h4 class="font-weight-bold associate-card-title">Amyush Techno (Pixels)</h4>
-                                <p class="small text-muted mb-2">Amyush Techno Solution Pvt. Ltd. Complete range of power conditioning equipment, voltage stabilizers, and line conditioners.</p>
-                                <div class="small mb-2">
-                                    <strong>Products:</strong> Digital Voltage Stabilizers, Servo Stabilizers, UPS Systems
-                                </div>
-                                <div class="small text-muted">
-                                    <strong>Applications:</strong> Stabilizing cooling equipment, corporate offices, home ACs
-                                </div>
-                            </div>
-                            <a href="products.html?cat=hvac-components" class="btn-link-custom font-weight-bold mt-3 text-primary">Explore Associate <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
+
+                <!-- 23. Tecumseh -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="compressors" data-name="tecumseh products company" data-products="hermetic reciprocating compressors condensing units spares" data-desc="display catering refrigeration cooling loops">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_tecumseh.png" alt="Tecumseh" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Tecumseh</h4>
+                                <span class="badge bg-soft-success px-3 py-1 rounded-pill small">SSD Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Tecumseh Products Company. Hermetic reciprocating compressors, condensing units, and spares for commercial display refrigeration.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Hermetic Compressors, FHP Condensing Units, Spares</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Visi-coolers, Chest Freezers, Ice Cube Machines</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=refrigeration" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Tecumseh" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 24. Dixell -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="controls" data-name="dixell process controls emerson make" data-products="digital controllers data loggers xr microcontrollers rs485" data-desc="defrost manager relays industrial automation cooling">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_dixell.png" alt="Dixell" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Dixell</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Authorized Dealer</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Dixell Make. Emerson digital temperature controllers, data loggers, defrost managers, and telemetry modules.</p>
+                                <div class="small mb-1"><strong>Products:</strong> XR Series Microcontrollers, Temperature Probes, RS485 Modules</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Cold Room Control Panels, Telecom Cooling, Retail Displays</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Dixell" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 25. Multispan -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="controls" data-name="multispan control instruments pvt ltd cryo" data-products="indicators scanners indicator panels relays temp logger" data-desc="microcontrollers process panels indicator wiring monitors">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_multispan.png" alt="Multispan" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Multispan</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Multispan Control Instruments Pvt. Ltd. Process indicators, multi-channel scanners, data loggers, and temperature controllers.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Process Indicators, Multi-channel Scanners, Control Dashboards</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Industrial Panel Wiring, Chilling capacity monitoring</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Multispan" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 26. PVR Controls (Sub-Zero) -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="controls" data-name="pvr controls sub-zero castle" data-products="digital controllers sensors safety switches flow switch valves" data-desc="microcontrollers process indicators panel components display cabinets">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_sub_zero.png" alt="Sub-Zero" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">PVR (Sub-Zero)</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Sourcing Associate</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">PVR Controls. Sub-Zero and Castle brand digital temperature microcontrollers, safety switches, and process control boards.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Digital Temperature Controllers, Data Loggers, Sensors</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Cold Room Panels, Refrigeration Cabinets, Chilling Assemblies</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20PVR%20Controls" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 27. SRF Gases -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="accessories" data-name="srf limited fluorochemicals business floron" data-products="floron gases refrigerant cylinders cans butane cylinders tonners r-32 r-134a r-404a r-407c r-410a r-22" data-desc="recharging cooling loops high purity distribution">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_srf.png" alt="SRF" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">SRF Gases</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Channel Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Srf Limited {Fluorochemicals Business}. Floron high-purity refrigerant gases (R-22, R-134a, R-404a, R-407c, R-410a, R-32, R-600) and butane cans.</p>
+                                <div class="small mb-1"><strong>Products:</strong> R-32, R-134a, R-410a, R-404a, R-22 Cylinders & Tonners</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> AC Re-charging, Industrial cooling loops, Wholesaling</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20SRF%20Gases" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 28. Rajco Metal -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="accessories" data-name="rajco metal industries pvt ltd" data-products="copper tubes pipes pancake coils fittings VRF VRV plumbing MGPS" data-desc="drawn seamless high pressure piping lines medical gas">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_rajco.png" alt="Rajco" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Rajco Copper</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Sourcing Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Rajco Metal Industries Pvt. Ltd. Seamless drawn copper pipes, pancake coils, and fittings for medical gas and VRF/VRV plumbing.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Seamless Copper Pipes, Pancake Coils, copper fittings</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> High-pressure VRF loops, Medical Gas Pipelines (MGPS)</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Rajco%20Copper" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 29. Honeywell -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="controls" data-name="honeywell automation india limited" data-products="digital thermostats modulating actuators water flow switches spares" data-desc="fan coil fcu control building automation integration systems">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_honeywell.png" alt="Honeywell" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Honeywell</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Sourcing Associate</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Honeywell Automation India Limited. Digital fan coil unit (FCU) thermostats, modulating actuators, water flow switches, and spare loops.</p>
+                                <div class="small mb-1"><strong>Products:</strong> T6861 Thermostats, Modulating Valves, Water Flow switches</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Fan Coil Unit control, Building Automation Systems</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Honeywell" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 30. Amyush Techno Solution (Pixels) -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="electrical" data-name="amyush techno solution pvt ltd pixels" data-products="voltage stabilizers power conditioning servo stabilizers ups systems" data-desc="electrical voltage spikes protection domestic commercial industrial">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_pixels.png" alt="Pixels" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Amyush Techno</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Power Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Amyush Techno Solution Pvt. Ltd. Complete range of power conditioning equipment, voltage stabilizers, and line conditioners.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Digital Voltage Stabilizers, Servo Stabilizers, UPS Systems</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Stabilizing cooling equipment, corporate offices, home ACs</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Amyush%20Techno" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 31. Alfa Laval -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="heat-exchangers" data-name="alfa laval jiangyin manufacturing co ltd" data-products="plate heat exchangers brazed exchangers bhe shell tube condensers" data-desc="thermal lines process cooling dairy systems">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px;">
+                                    <img src="assets/images/logos/logo_alfa_laval.png" alt="Alfa Laval" style="max-height: 60px; max-width: 100%; object-fit: contain;" loading="lazy">
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Alfa Laval</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Authorized Wholesaler</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Alfa Laval (Jiangyin) Manufacturing Co. Ltd. Plate Heat Exchanger Especially Brazed type Heat Exchangers (BHE's) & Shell & Tube Heat Exchangers.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Brazed Plate Heat Exchangers (BHE), Shell & Tube Condensers</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Industrial Chilling, Food Processing, Dairy Thermal Lines</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=cold-chain" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Alfa%20Laval" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 32. Govind Electricals (PLACEHOLDER FOR MISSING LOGO) -->
+                <div class="col-lg-6 col-12 mb-4 associate-card" data-category="electrical" data-name="govind electricals skyland" data-products="voltage stabilizers skyland stabilizers transformers" data-desc="heavy duty electrical spike protection line conditioners">
+                    <div class="premium-card p-4 h-100 bg-white border rounded shadow-sm hover-elevation">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-5 text-center border-end-md pb-3 pb-md-0">
+                                <div class="logo-wrapper mb-3 mx-auto" style="height: 90px; display: flex; align-items: center; justify-content: center; padding: 12px; background-color: #fafbfc; border-radius: 8px; border: 1px solid #f0f2f5;">
+                                    <span class="font-weight-bold text-muted" style="font-size: 1rem; letter-spacing: 0.5px;">Govind Electricals</span>
+                                </div>
+                                <h4 class="font-weight-bold text-heading text-center mb-1" style="font-size: 1.2rem;">Govind Electricals</h4>
+                                <span class="badge bg-soft-primary px-3 py-1 rounded-pill small">Sourcing Partner</span>
+                            </div>
+                            <div class="col-md-7 ps-md-4">
+                                <p class="small text-muted mb-2">Govind Electricals (Skyland). Skyland brand heavy-duty voltage stabilizers for commercial HVAC-R installations and compressor grids.</p>
+                                <div class="small mb-1"><strong>Products:</strong> Voltage Stabilizers, Skyland Stabilizers</div>
+                                <div class="small mb-3 text-muted"><strong>Applications:</strong> Commercial AC protection, Cold Storage Compressors</div>
+                                <div class="d-flex gap-2">
+                                    <a href="products.html?cat=hvac-components" class="btn btn-sm btn-outline-primary-custom flex-grow-1">View Products</a>
+                                    <a href="contact.html?subject=Enquiry%20regarding%20Govind%20Electricals" class="btn btn-sm btn-primary-custom flex-grow-1 text-center text-white">Request Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -783,7 +1048,46 @@
 
     <!-- Bootstrap 5 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    
+    <!-- Dynamic filtering Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('associate-search-bar');
+            const filterChips = document.querySelectorAll('.associate-filter-chip');
+            const cards = document.querySelectorAll('.associate-card');
+            let currentCategory = 'all';
+
+            function filterCards() {
+                const query = searchInput.value.toLowerCase().trim();
+                
+                cards.forEach(card => {
+                    const name = card.getAttribute('data-name').toLowerCase();
+                    const products = card.getAttribute('data-products').toLowerCase();
+                    const desc = card.getAttribute('data-desc').toLowerCase();
+                    const category = card.getAttribute('data-category');
+
+                    const matchesSearch = name.includes(query) || products.includes(query) || desc.includes(query);
+                    const matchesCategory = currentCategory === 'all' || category === currentCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            searchInput.addEventListener('input', filterCards);
+
+            filterChips.forEach(chip => {
+                chip.addEventListener('click', function() {
+                    filterChips.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    currentCategory = this.getAttribute('data-filter');
+                    filterCards();
+                });
+            });
+        });
+    </script>
 </body>
 </html>
