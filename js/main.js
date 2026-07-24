@@ -259,15 +259,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     formIsValid = false;
                 }
             });
-            if (submitBtn) {
-                if (formIsValid) {
-                    submitBtn.removeAttribute('disabled');
-                    submitBtn.style.opacity = '1';
-                } else {
-                    submitBtn.setAttribute('disabled', 'true');
-                    submitBtn.style.opacity = '0.65';
-                }
-            }
             return formIsValid;
         }
 
