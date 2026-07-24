@@ -1877,3 +1877,109 @@ h6:not(.hero-section h6):not(.page-banner h6):not(.showcase-banner h6):not(.text
     margin-bottom: 10px !important;
 }
 
+/* Responsive vertical divider for cards */
+@media (min-width: 768px) {
+    .border-end-md {
+        border-right: 1px solid #E2E8F0 !important;
+    }
+}
+
+/* Premium Card hover elevation and transition */
+.hover-elevation {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease !important;
+    border: 1px solid rgba(10, 77, 162, 0.08) !important;
+}
+
+.hover-elevation:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(10, 77, 162, 0.12) !important;
+    border-color: rgba(10, 77, 162, 0.3) !important;
+}
+
+/* Soft Badges */
+.bg-soft-primary {
+    background-color: rgba(47, 128, 237, 0.08) !important;
+    color: #2f80ed !important;
+    font-weight: 600;
+}
+
+.bg-soft-success {
+    background-color: rgba(39, 174, 96, 0.08) !important;
+    color: #27ae60 !important;
+    font-weight: 600;
+}
+
+.bg-soft-secondary {
+    background-color: rgba(120, 144, 156, 0.08) !important;
+    color: #546e7a !important;
+    font-weight: 600;
+}
+
+/* Logo container spacing */
+.logo-wrapper {
+    background-color: #fafbfc;
+    border-radius: 8px;
+    border: 1px solid #f0f2f5;
+    transition: background-color 0.3s ease;
+}
+
+.hover-elevation:hover .logo-wrapper {
+    background-color: #ffffff;
+}
+
+/* Filter Chips styling */
+.associate-filter-chip {
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background-color: var(--color-bg-light);
+    border: 1px solid #E2E8F0;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.associate-filter-chip:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: rgba(10, 77, 162, 0.03);
+}
+
+.associate-filter-chip.active {
+    background-color: var(--color-primary) !important;
+    color: #ffffff !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 4px 10px rgba(10, 77, 162, 0.2);
+}
+
+/* Search Wrapper styling */
+.associate-search-wrapper {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.associate-search-wrapper input {
+    height: 50px;
+    padding-left: 45px;
+    border-radius: 30px;
+    border: 1px solid #E2E8F0;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.associate-search-wrapper input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(10, 77, 162, 0.15);
+}
+
+.associate-search-wrapper i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+}
+
